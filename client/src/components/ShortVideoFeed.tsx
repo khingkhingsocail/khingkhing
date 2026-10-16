@@ -320,7 +320,19 @@ function FeedPostCard({
       aria-label={`${isPrivate ? "โพสต์ส่วนตัว" : isPublic ? "โพสต์สาธารณะ" : post.kind === "video" ? "วิดีโอตัวอย่าง" : "ภาพตัวอย่าง"}: ${post.title}`}
     >
       <div className="short-post__canvas">
-        <div className="short-post__media">
+        <div
+          className="short-post__media"
+          onClick={() => setLightboxOpen(true)}
+          role="button"
+          tabIndex={0}
+          aria-label={`เปิด${post.kind === "video" ? "วิดีโอ" : "รูปภาพ"} ${post.title} แบบเต็มจอ`}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              setLightboxOpen(true);
+            }
+          }}
+        >
           {post.kind === "video" ? (
             <video
               ref={videoRef}

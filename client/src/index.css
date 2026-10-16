@@ -455,6 +455,8 @@ body { overflow: hidden; background: var(--app-bg); }
 .short-post__canvas { position: relative; width: min(100%, 440px); height: min(100%, 790px); aspect-ratio: 9 / 16; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 17px; background: #11161a; box-shadow: 0 22px 70px rgba(0,0,0,.36); isolation: isolate; }
 .short-post__media, .short-post__media img, .short-post__media video { position: absolute; inset: 0; width: 100%; height: 100%; }
 .short-post__media { z-index: -2; background: #11161a; }
+.short-post__media { cursor: zoom-in; }
+.short-post__media:focus-visible { outline: 2px solid var(--lime); outline-offset: -5px; }
 .short-post__media img, .short-post__media video { display: block; object-fit: cover; }
 .short-post__media img { filter: saturate(.91); }
 .short-post__shade { position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(180deg,rgba(0,0,0,.32),transparent 23%,transparent 43%,rgba(0,0,0,.78) 100%), linear-gradient(90deg,rgba(0,0,0,.14),transparent 60%); }
