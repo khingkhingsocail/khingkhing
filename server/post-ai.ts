@@ -13,16 +13,19 @@ function fail(res: Response, cause: unknown) {
 
 export function registerPostAIRoutes(app: Express) {
   const router = express.Router();
-  router.post("/suggest", express.json({ limit: "8kb" }), async (req: Request, res: Response) => {
+  router.post("/suggest", express.json({ limit: "6mb" }), async (req: Request, res: Response) => {
     const filename = safeText(req.body?.filename, 160);
     const mimeType = safeText(req.body?.mimeType, 80);
     const kind = req.body?.kind === "video" ? "วิดีโอ" : "รูปภาพ";
+    const mediaDataUrl = typeof req.body?.mediaDataUrl === "string" && /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+/=]+$/.test(req.body.mediaDataUrl)
+      ? req.body.mediaDataUrl
+      : null;
     if (!filename) return res.status(400).json({ error: "ต้องเลือกไฟล์ก่อนให้ AI แนะนำ" });
 
     try {
       const response = await invokeLLM({
         model: "gemini-3-flash-preview",
-        maxTokens: 1200,
+        maxTokens: 4000,
         messages: [
           {
             role: "system",
@@ -31,26 +34,19 @@ export function registerPostAIRoutes(app: Express) {
           },
           {
             role: "user",
-            content: `สร้างคำแนะนำสำหรับโพสต์${kind}\nชื่อไฟล์: ${filename}\nชนิดไฟล์: ${mimeType}\nสร้าง title ภาษาไทยไม่เกิน 100 ตัวอักษร, description ภาษาไทยไม่เกิน 170 ตัวอักษร และ hashtags จำนวน 5 คำพอดี แต่ละคำขึ้นต้นด้วย # ห้ามเว้นวรรคในคำ และไม่ซ้ำกัน`,
+            content: [
+              {
+                type: "text",
+                text: `วิเคราะห์${kind}จากภาพตัวอย่างที่แนบ (ถ้าเป็นวิดีโอคือเฟรมตัวอย่าง) ห้ามระบุตัวตนหรือชื่อบุคคลจากใบหน้า ให้ระบุเฉพาะสิ่งที่เห็นจริง และตอบเป็น JSON object เท่านั้น มีคีย์ title, description, hashtags, mediaType, detectedObjects, animals, actions, scene, colors\nชื่อไฟล์: ${filename}\nชนิดไฟล์: ${mimeType}\nสร้าง title ภาษาไทยไม่เกิน 100 ตัวอักษร, description ภาษาไทยไม่เกิน 170 ตัวอักษร และ hashtags จำนวน 5 คำพอดี แต่ละคำขึ้นต้นด้วย # ห้ามเว้นวรรคในคำและไม่ซ้ำกัน`,
+              },
+              ...(mediaDataUrl ? [{ type: "image_url" as const, image_url: { url: mediaDataUrl, detail: "auto" as const } }] : []),
+            ],
           },
         ],
-        outputSchema: {
-          name: "post_suggestion",
-          strict: true,
-          schema: {
-            type: "object",
-            properties: {
-              title: { type: "string" },
-              description: { type: "string" },
-              hashtags: { type: "array", items: { type: "string" }, minItems: 5, maxItems: 5 },
-            },
-            required: ["title", "description", "hashtags"],
-            additionalProperties: false,
-          },
-        },
+        responseFormat: { type: "json_object" },
       });
       const content = response.choices?.[0]?.message?.content;
-      let raw: { title?: unknown; description?: unknown; hashtags?: unknown } = {};
+      let raw: { title?: unknown; description?: unknown; hashtags?: unknown; mediaType?: unknown; detectedObjects?: unknown; animals?: unknown; actions?: unknown; scene?: unknown; colors?: unknown } = {};
       if (typeof content === "string") {
         try {
           raw = JSON.parse(content) as typeof raw;
@@ -69,6 +65,12 @@ export function registerPostAIRoutes(app: Express) {
         title: safeText(raw.title, 100) || `โพสต์${kind}ใหม่`,
         description: safeText(raw.description, 170) || `แชร์${kind}จากไฟล์ ${filename}`,
         hashtags: [...hashtags, ...fallbackTags].filter((tag, index, all) => all.indexOf(tag) === index).slice(0, 5),
+        mediaType: safeText(raw.mediaType, 80) || kind,
+        detectedObjects: Array.isArray(raw.detectedObjects) ? raw.detectedObjects.filter((v): v is string => typeof v === "string").slice(0, 8) : [],
+        animals: Array.isArray(raw.animals) ? raw.animals.filter((v): v is string => typeof v === "string").slice(0, 8) : [],
+        actions: Array.isArray(raw.actions) ? raw.actions.filter((v): v is string => typeof v === "string").slice(0, 8) : [],
+        scene: safeText(raw.scene, 120),
+        colors: Array.isArray(raw.colors) ? raw.colors.filter((v): v is string => typeof v === "string").slice(0, 6) : [],
       });
     } catch (cause) {
       return fail(res, cause);

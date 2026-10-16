@@ -79,6 +79,36 @@ function useFilePreview(file: File | null) {
   return url;
 }
 
+async function makeAIFrame(file: File): Promise<string | undefined> {
+  const source = URL.createObjectURL(file);
+  try {
+    if (isImageFile(file)) {
+      const image = new Image();
+      image.src = source;
+      await new Promise<void>((resolve, reject) => { image.onload = () => resolve(); image.onerror = () => reject(new Error("image")); });
+      const scale = Math.min(1, 768 / Math.max(image.naturalWidth, image.naturalHeight));
+      const canvas = document.createElement("canvas");
+      canvas.width = Math.max(1, Math.round(image.naturalWidth * scale));
+      canvas.height = Math.max(1, Math.round(image.naturalHeight * scale));
+      canvas.getContext("2d")?.drawImage(image, 0, 0, canvas.width, canvas.height);
+      return canvas.toDataURL("image/jpeg", 0.78);
+    }
+    const video = document.createElement("video");
+    video.src = source;
+    video.muted = true;
+    await new Promise<void>((resolve, reject) => { video.onloadeddata = () => resolve(); video.onerror = () => reject(new Error("video")); });
+    video.currentTime = Math.min(1, Number.isFinite(video.duration) ? video.duration / 2 : 1);
+    await new Promise<void>(resolve => { video.onseeked = () => resolve(); setTimeout(resolve, 1500); });
+    const scale = Math.min(1, 768 / Math.max(video.videoWidth, video.videoHeight));
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(video.videoWidth * scale));
+    canvas.height = Math.max(1, Math.round(video.videoHeight * scale));
+    canvas.getContext("2d")?.drawImage(video, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL("image/jpeg", 0.78);
+  } catch { return undefined; }
+  finally { URL.revokeObjectURL(source); }
+}
+
 function PublicMediaCard({
   item,
   canDelete,
@@ -228,6 +258,7 @@ export default function PublicMediaLibrary({
   const [hashtags, setHashtags] = useState<string[]>([]);
   const [taggedFriends, setTaggedFriends] = useState("");
   const [suggestionLoading, setSuggestionLoading] = useState(false);
+  const [aiAnalysis, setAiAnalysis] = useState<{ mediaType: string; detectedObjects: string[]; animals: string[]; actions: string[]; scene: string; colors: string[] } | null>(null);
   const previewUrl = useFilePreview(file);
 
   useEffect(() => {
@@ -264,6 +295,7 @@ export default function PublicMediaLibrary({
     setPreviewFailed(false);
     setShowFeedLink(false);
     setHashtags([]);
+    setAiAnalysis(null);
     if (!selected) return;
     setTitle(fileBaseName(selected.name).slice(0, 100));
     setDescription("");
@@ -274,16 +306,18 @@ export default function PublicMediaLibrary({
     setSuggestionLoading(true);
     setError("");
     try {
+      const mediaDataUrl = await makeAIFrame(selected);
       const response = await fetch("/api/post-ai/suggest", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ filename: selected.name, mimeType: selected.type, kind: isImageFile(selected) ? "image" : "video" }),
+        body: JSON.stringify({ filename: selected.name, mimeType: selected.type, kind: isImageFile(selected) ? "image" : "video", mediaDataUrl }),
       });
-      const payload = (await response.json()) as { title?: string; description?: string; hashtags?: string[]; error?: string };
+      const payload = (await response.json()) as { title?: string; description?: string; hashtags?: string[]; mediaType?: string; detectedObjects?: string[]; animals?: string[]; actions?: string[]; scene?: string; colors?: string[]; error?: string };
       if (!response.ok) throw new Error(payload.error || "AI แนะนำโพสต์ไม่สำเร็จ");
       if (payload.title) setTitle(payload.title);
       if (payload.description) setDescription(payload.description);
       setHashtags(Array.isArray(payload.hashtags) ? payload.hashtags.slice(0, 5) : []);
+      setAiAnalysis({ mediaType: payload.mediaType || "", detectedObjects: payload.detectedObjects || [], animals: payload.animals || [], actions: payload.actions || [], scene: payload.scene || "", colors: payload.colors || [] });
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "AI แนะนำโพสต์ไม่สำเร็จ");
     } finally {
@@ -554,6 +588,17 @@ export default function PublicMediaLibrary({
                 <Sparkles size={15} /> {suggestionLoading ? "AI กำลังคิด…" : "รีเฟรชชื่อ คำอธิบาย และ #"}
               </button>
               {hashtags.length ? <span className="public-media-card__meta">AI สร้างแฮชแท็กแล้ว 5 คำ: {hashtags.join(" ")}</span> : null}
+            </div>
+          ) : null}
+          {aiAnalysis ? (
+            <div className="ai-analysis" aria-live="polite">
+              <strong>AI จำแนกสื่อให้แล้ว</strong>
+              <span>ประเภท: {aiAnalysis.mediaType || "ไม่แน่ใจ"}</span>
+              {aiAnalysis.detectedObjects.length ? <span>สิ่งของ/วัตถุ: {aiAnalysis.detectedObjects.join(", ")}</span> : null}
+              {aiAnalysis.animals.length ? <span>สัตว์: {aiAnalysis.animals.join(", ")}</span> : null}
+              {aiAnalysis.actions.length ? <span>การกระทำที่เห็น: {aiAnalysis.actions.join(", ")}</span> : null}
+              {aiAnalysis.scene ? <span>สถานที่/ฉาก: {aiAnalysis.scene}</span> : null}
+              {aiAnalysis.colors.length ? <span>สีเด่น: {aiAnalysis.colors.join(", ")}</span> : null}
             </div>
           ) : null}
           <div className="form-row">
