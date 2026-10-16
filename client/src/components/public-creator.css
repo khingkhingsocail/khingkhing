@@ -1,0 +1,74 @@
+.short-avatar {
+  position: relative;
+  overflow: hidden;
+}
+
+.short-avatar > img,
+.feed-profile-avatar > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+
+.feed-profile-cover--account {
+  background:
+    radial-gradient(circle at 82% 28%, rgba(117, 233, 236, 0.2), transparent 27%),
+    linear-gradient(130deg, #172126, #101619 68%, #1e292d);
+}
+
+.feed-profile-avatar--account {
+  position: relative;
+  overflow: hidden;
+}
+
+.feed-profile-loading,
+.feed-profile-error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 14px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--app-border);
+  border-radius: 8px;
+  background: #111519;
+  color: #a0adaf;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.feed-profile-error {
+  border-color: rgba(255, 150, 130, 0.3);
+  color: #f0c3b8;
+}
+
+.feed-profile-error button,
+.feed-profile-more button {
+  flex: 0 0 auto;
+  padding: 9px 13px;
+  border: 1px solid rgba(117, 233, 236, 0.28);
+  border-radius: 7px;
+  background: rgba(117, 233, 236, 0.08);
+  color: #dffbfc;
+  font: inherit;
+  cursor: pointer;
+}
+
+.feed-profile-error button:hover,
+.feed-profile-more button:hover:not(:disabled) {
+  background: rgba(117, 233, 236, 0.16);
+}
+
+.feed-profile-more {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 4px;
+}
+
+.feed-profile-more button:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}

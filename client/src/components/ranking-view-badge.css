@@ -1,0 +1,35 @@
+.ranking-view-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #b4c8c0;
+  font-size: 11px;
+  line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  margin-top: 6px;
+}
+.ranking-view-badge {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.ranking-view-badge > button {
+  font: inherit;
+  font-size: 10px;
+  color: #d9ff55;
+  background: #202b20;
+  border: 1px solid #4c6152;
+  border-radius: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.ranking-view-badge button:focus-visible {
+  outline: 2px solid #d9ff55;
+  outline-offset: 3px;
+}
+.arena-ranking-row .ranking-view-count {
+  display: flex;
+}

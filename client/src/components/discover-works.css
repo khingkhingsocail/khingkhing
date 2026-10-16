@@ -1,0 +1,72 @@
+.discover-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 26px;
+}
+.discover-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 17px 18px;
+  border: 1px solid var(--app-border);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #bdc7cb;
+  text-align: left;
+  cursor: pointer;
+}
+.discover-section > svg {
+  flex-shrink: 0;
+}
+.discover-section > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+.discover-section strong {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.discover-section small {
+  font-size: 11px;
+  line-height: 1.6;
+}
+.discover-section:hover {
+  border-color: var(--app-cyan);
+}
+.discover-section.is-active {
+  border-color: var(--lime);
+  background: rgba(217, 255, 85, 0.07);
+  color: var(--app-white);
+}
+.discover-section.is-active > svg {
+  color: var(--lime);
+}
+.discover-section:focus-visible {
+  outline: 2px solid var(--app-cyan);
+  outline-offset: 3px;
+}
+@media (max-width: 680px) {
+  .discover-sections {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .discover-section {
+    align-items: flex-start;
+    gap: 8px;
+    padding: 13px 10px;
+  }
+  .discover-section > svg {
+    width: 18px;
+    height: 21px;
+  }
+  .discover-section strong {
+    font-size: 14px;
+  }
+  .discover-section small {
+    font-size: 10px;
+  }
+}

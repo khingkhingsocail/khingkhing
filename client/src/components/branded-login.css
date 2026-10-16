@@ -1,0 +1,614 @@
+.khing-login {
+  --login-lime: #d9ff55;
+  --login-cyan: #77e6ea;
+  position: relative;
+  isolation: isolate;
+  min-height: 100dvh;
+  padding: 36px clamp(22px, 6vw, 96px) 24px;
+  background: #0b1216;
+  color: #eff5f2;
+  font-family: "IBM Plex Sans Thai", sans-serif;
+  overflow: hidden;
+}
+.khing-login__ambient {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 12% 18%, #d9ff550b, transparent 48%),
+    radial-gradient(ellipse at 94% 72%, #77e6ea08, transparent 44%),
+    repeating-linear-gradient(120deg, transparent 0 99px, #c3dde906 100px 101px);
+}
+.khing-login__nav {
+  max-width: 1336px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.khing-login__brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+  color: #f4f9ee;
+}
+.khing-login__brand > span:last-child {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.khing-login__brand small {
+  display: block;
+  margin-top: 5px;
+  color: #8b9e91;
+  font:
+    600 8px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 2.7px;
+}
+.khing-login__brand .brand-mark {
+  width: 37px;
+  height: 37px;
+  flex-shrink: 0;
+}
+.khing-login__browse {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a6bcb9;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 10px 2px;
+  border-bottom: 1px solid #65767555;
+}
+.khing-login__body {
+  max-width: 1160px;
+  margin: 72px auto 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 6vw, 100px);
+}
+.khing-login__story {
+  flex: 1;
+  min-width: 0;
+}
+.khing-login__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--login-lime);
+  font:
+    600 11px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 1.8px;
+}
+.khing-login__eyebrow i {
+  display: block;
+  flex: 1;
+  height: 1px;
+  max-width: 80px;
+  margin-left: 12px;
+  background: #d9ff5550;
+}
+.khing-login__english {
+  margin: 19px 0 22px;
+  font:
+    500 10px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 2.1px;
+  color: #91a8a7;
+}
+.khing-login h1 {
+  margin: 0;
+  font-size: clamp(56px, 7.5vw, 98px);
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -3px;
+  color: var(--login-lime);
+}
+.khing-login h1 span {
+  display: block;
+  margin-top: 7px;
+  color: #f0f6f0;
+  font-size: clamp(26px, 3.1vw, 43px);
+  letter-spacing: -1px;
+  line-height: 1.5;
+}
+.khing-login__intro {
+  margin: 24px 0 27px;
+  color: #a0b5b7;
+  font-size: 13px;
+  line-height: 1.95;
+}
+.khing-login__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.khing-login__categories > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 11px;
+  border: 1px solid #a7c3c321;
+  border-radius: 4px;
+  background: #121e23;
+  color: #b2c4c5;
+  font-size: 10px;
+}
+.khing-login__categories svg {
+  color: var(--login-cyan);
+}
+.khing-login__stage {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-top: 38px;
+  max-width: 395px;
+}
+.khing-login__stage-line {
+  flex: 1;
+  min-width: 35px;
+  height: 1px;
+  background: linear-gradient(90deg, #d9ff5500, #d9ff5560);
+}
+.khing-login__stage-mark {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: #efd297;
+  border: 1px solid #efd29750;
+  border-radius: 13px 3px 13px 3px;
+  background: #242319;
+  transform: rotate(-5deg);
+}
+.khing-login__stage > span:last-child {
+  color: #6e8588;
+  font:
+    500 9px/1.9 "Space Grotesk",
+    sans-serif;
+  letter-spacing: 1.5px;
+}
+.khing-login__stage b {
+  color: #aec3bd;
+  font-weight: 600;
+}
+.khing-login__card {
+  width: min(100%, 408px);
+  flex-shrink: 0;
+  position: relative;
+  padding: 28px 31px 29px;
+  border: 1px solid #86b8b945;
+  border-radius: 22px 5px 22px 5px;
+  background: linear-gradient(145deg, #162329, #10191e 62%);
+  box-shadow: 0 32px 75px #0005;
+}
+.khing-login__card:before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 2px;
+  top: -1px;
+  left: 30px;
+  background: var(--login-lime);
+}
+.khing-login__card-index {
+  color: #87a2a5;
+  font:
+    600 9px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 1.5px;
+  margin: 0 0 25px;
+}
+.khing-login__emblem {
+  display: grid;
+  place-items: center;
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #d9ff5570;
+  border-radius: 15px 3px 15px 3px;
+  background: #d9ff5509;
+  box-shadow: 0 0 0 5px #d9ff5504;
+  color: var(--login-lime);
+  margin-bottom: 23px;
+}
+.khing-login__emblem span {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1;
+}
+.khing-login__card h2 {
+  margin: 0 0 10px;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.khing-login__card-copy {
+  margin: 0;
+  color: #9cb2b7;
+  font-size: 11px;
+  line-height: 1.9;
+}
+.khing-login__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 27px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.khing-login__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #c0d1ce;
+}
+.khing-login__benefits li > svg:first-child {
+  color: var(--login-cyan);
+  flex-shrink: 0;
+}
+.khing-login__benefits li > svg:last-child {
+  margin-left: auto;
+  color: #92ab9a;
+}
+.khing-login__submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 17px;
+  min-height: 49px;
+  border: 1px solid var(--login-lime);
+  border-radius: 8px 3px 8px 3px;
+  background: var(--login-lime);
+  color: #101810;
+  text-decoration: none;
+  font:
+    600 13px "IBM Plex Sans Thai",
+    sans-serif;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    transform 0.15s;
+}
+.khing-login__submit:hover:not(:disabled) {
+  background: #e7ff92;
+  transform: translateY(-1px);
+}
+.khing-login__submit:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.khing-login__provider {
+  margin: 11px 0 0;
+  text-align: center;
+  color: #8aa1a6;
+  font-size: 9px;
+  line-height: 1.9;
+}
+.khing-login__error {
+  color: #ffbab7;
+  font-size: 11px;
+  line-height: 1.9;
+  background: #ff757509;
+  border: 1px solid #ff757531;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 15px 0 0;
+}
+.khing-login__error button {
+  border: 0;
+  border-bottom: 1px solid #f4bcbc;
+  background: transparent;
+  color: #f4bcbc;
+  cursor: pointer;
+  font: inherit;
+}
+.khing-login__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 15px;
+  color: #779196;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.khing-login__divider span {
+  height: 1px;
+  flex: 1;
+  background: #78969925;
+}
+.khing-login__guest {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 13px;
+  min-height: 43px;
+  background: #0e171b;
+  border: 1px solid #82b1b530;
+  border-radius: 7px;
+  color: #c3d6d6;
+  text-decoration: none;
+  font-size: 11px;
+}
+.khing-login__privacy {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #738f93;
+  font-size: 9px;
+  line-height: 1.85;
+}
+.khing-login__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 1336px;
+  margin: auto;
+  border-top: 1px solid #809e9c20;
+  padding-top: 20px;
+  color: #6f888b;
+  font-size: 9px;
+}
+.khing-login__footer span:last-child {
+  font:
+    500 9px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 1.1px;
+}
+.khing-login a:focus-visible,
+.khing-login button:focus-visible {
+  outline: 2px solid var(--login-cyan);
+  outline-offset: 5px;
+}
+.khing-login a:hover {
+  color: var(--login-lime);
+}
+.khing-login a.khing-login__submit:hover {
+  color: #101810;
+}
+.short-login-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  margin-top: 15px;
+  min-height: 38px;
+  border: 1px solid #d9ff5540;
+  border-radius: 6px;
+  background: #d9ff5508;
+  color: #d9ff55;
+  text-decoration: none;
+  font-size: 11px;
+}
+@media (max-width: 900px) {
+  .khing-login {
+    padding: 27px 30px 22px;
+  }
+  .khing-login__body {
+    gap: 28px;
+    margin-top: 58px;
+  }
+  .khing-login__card {
+    width: 355px;
+    padding: 25px;
+  }
+  .khing-login h1 {
+    font-size: 65px;
+  }
+  .khing-login h1 span {
+    font-size: 29px;
+  }
+  .khing-login__intro {
+    font-size: 12px;
+  }
+  .khing-login__categories > span {
+    font-size: 9px;
+    padding: 7px 8px;
+  }
+}
+@media (max-width: 680px) {
+  .khing-login {
+    padding: 22px 22px 24px;
+  }
+  .khing-login__brand > span:last-child {
+    font-size: 22px;
+  }
+  .khing-login__brand .brand-mark {
+    width: 30px;
+    height: 30px;
+  }
+  .khing-login__browse {
+    font-size: 11px;
+  }
+  .khing-login__body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 420px;
+    margin: 44px auto 32px;
+  }
+  .khing-login__english {
+    font-size: 9px;
+    margin: 16px 0 18px;
+    letter-spacing: 1.5px;
+  }
+  .khing-login__eyebrow {
+    font-size: 10px;
+  }
+  .khing-login h1 {
+    font-size: 64px;
+    letter-spacing: -2px;
+  }
+  .khing-login h1 span {
+    font-size: 29px;
+    line-height: 1.5;
+    margin-top: 7px;
+  }
+  .khing-login__intro {
+    margin: 17px 0 18px;
+    font-size: 12px;
+  }
+  .khing-login__categories {
+    gap: 6px;
+  }
+  .khing-login__stage {
+    display: none;
+  }
+  .khing-login__card {
+    width: 100%;
+    padding: 25px;
+  }
+  .khing-login__card h2 {
+    font-size: 25px;
+  }
+  .khing-login__footer {
+    line-height: 1.9;
+    font-size: 9px;
+    gap: 8px;
+  }
+  .khing-login__footer span:last-child {
+    font-size: 8px;
+  }
+  .khing-login__privacy {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .khing-login__submit {
+    transition: none;
+  }
+  .khing-login__submit:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* Login-first hierarchy: keep authentication visible before the brand story. */
+.khing-login__nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.khing-login__nav-enter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #d9ff5570;
+  border-radius: 8px 3px 8px 3px;
+  background: #d9ff5510;
+  color: #d9ff55;
+  font:
+    600 12px "IBM Plex Sans Thai",
+    sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.khing-login__nav-enter:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.khing-login__card .khing-login__submit {
+  margin-top: 24px;
+  min-height: 68px;
+  padding: 15px 18px;
+  font-size: 18px;
+}
+.khing-login__submit-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+.khing-login__submit-label > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.khing-login__submit-label small {
+  font:
+    600 9px "Space Grotesk",
+    sans-serif;
+  letter-spacing: 1.5px;
+  color: #37451c;
+}
+.khing-login__spinner {
+  animation: khing-login-spin 1s linear infinite;
+}
+.khing-login__provider {
+  font-size: 11px;
+  color: #b0c4c5;
+}
+.khing-login__privacy,
+.khing-login__footer,
+.khing-login__stage > span:last-child {
+  color: #9eb5b8;
+}
+.khing-login__divider {
+  color: #a6bfc3;
+}
+.khing-login__card-copy {
+  font-size: 13px;
+}
+@keyframes khing-login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 680px) {
+  .khing-login__nav-actions {
+    gap: 10px;
+  }
+  .khing-login__nav-actions .khing-login__browse {
+    display: none;
+  }
+  .khing-login__nav-enter {
+    font-size: 11px;
+    padding: 9px 12px;
+  }
+  .khing-login__body {
+    margin-top: 28px;
+    gap: 34px;
+  }
+  .khing-login__card {
+    order: -1;
+  }
+  .khing-login__emblem {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+  .khing-login__card-index {
+    margin-bottom: 20px;
+  }
+  .khing-login__card h2 {
+    font-size: 26px;
+  }
+  .khing-login h1 {
+    font-size: 48px;
+  }
+  .khing-login h1 span {
+    font-size: 24px;
+  }
+  .khing-login__story {
+    padding: 0 4px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .khing-login__spinner {
+    animation: none;
+  }
+}

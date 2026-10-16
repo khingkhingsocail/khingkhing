@@ -1,0 +1,1 @@
+CREATE INDEX `public_media_owner_created_id_idx` ON `public_media` (`owner_user_id`,`created_at`,`id`);

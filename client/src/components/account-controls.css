@@ -1,0 +1,88 @@
+.khing-account {
+  padding: 12px 0;
+  min-width: 0;
+}
+.khing-account__name {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 11px;
+  color: #95a9ab;
+  font-size: 10px;
+}
+.khing-account__name span {
+  font-size: 13px;
+  color: #e7eeeb;
+  overflow-wrap: anywhere;
+}
+.khing-account__note {
+  display: block;
+  margin-top: 8px;
+  color: #8e9fa3;
+  font-size: 9px;
+  line-height: 1.7;
+}
+.khing-account__loading {
+  color: #98aeb0;
+  font-size: 11px;
+}
+.khing-logout__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 14px;
+  color: #ffd1c9;
+  border: 1px solid #ffaaa540;
+  border-radius: 7px;
+  background: #ffaaa50a;
+  font:
+    500 12px "IBM Plex Sans Thai",
+    sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.khing-logout__button:hover:not(:disabled) {
+  background: #ffaaa51a;
+}
+.khing-logout__button:focus-visible {
+  outline: 2px solid #77e6ea;
+  outline-offset: 3px;
+}
+.khing-logout__button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.khing-logout__error {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #ffbab7;
+  margin: 8px 0 0;
+}
+.khing-login__card > .khing-logout {
+  margin-top: 12px;
+}
+.profile-account-panel {
+  padding: 18px 30px 0;
+  border-bottom: 1px solid #abc1bd20;
+  background: #10171b;
+}
+.profile-account-panel .khing-account {
+  max-width: 460px;
+  padding: 0 0 18px;
+}
+.profile-account-panel .short-login-link {
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  .profile-account-panel {
+    padding: 18px 18px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .khing-logout__button {
+    transition: none;
+  }
+}

@@ -1,0 +1,330 @@
+[
+  {
+    "facts": [
+      {
+        "asOf": "2026-09-18",
+        "excerpt": "I have served Berkshire since 1965.",
+        "label": "ความเกี่ยวข้องกับ Berkshire Hathaway",
+        "sourceTitle": "Warren E. Buffett Becomes Chairman Emeritus, Remains Director; Howard G. Buffett Elected Chairman — Berkshire Hathaway Inc. (ประกาศและจดหมายผู้ถือหุ้น)",
+        "sourceUrl": "https://www.berkshirehathaway.com/news/sep1826.pdf",
+        "text": "บัฟเฟตต์ระบุว่าเขารับใช้ Berkshire มาตั้งแต่ปี 1965"
+      },
+      {
+        "asOf": "2026-09-18",
+        "excerpt": "Warren E. Buffett has been named Chairman Emeritus, effective immediately ... Mr. Buffett will remain a member of the Board of Directors",
+        "label": "ตำแหน่งปัจจุบันตามประกาศ",
+        "sourceTitle": "Warren E. Buffett Becomes Chairman Emeritus, Remains Director; Howard G. Buffett Elected Chairman — Berkshire Hathaway Inc.",
+        "sourceUrl": "https://www.berkshirehathaway.com/news/sep1826.pdf",
+        "text": "Berkshire ประกาศว่า บัฟเฟตต์ได้รับแต่งตั้งเป็น Chairman Emeritus โดยมีผลทันที และยังคงเป็นกรรมการบริษัท"
+      },
+      {
+        "asOf": "2026-09-18",
+        "excerpt": "the Board has elected Howard G. Buffett ... as Chairman of the Board ... Greg Abel, Chief Executive Officer",
+        "label": "แยกจากประธานและ CEO ปัจจุบัน",
+        "sourceTitle": "Warren E. Buffett Becomes Chairman Emeritus, Remains Director; Howard G. Buffett Elected Chairman — Berkshire Hathaway Inc.",
+        "sourceUrl": "https://www.berkshirehathaway.com/news/sep1826.pdf",
+        "text": "ประกาศวันที่ 2026-09-18 ระบุว่า Howard G. Buffett ได้รับเลือกเป็นประธานกรรมการ และ Greg Abel เป็น Chief Executive Officer; จึงไม่เรียก Warren Buffett ว่าประธานหรือ CEO ปัจจุบัน"
+      }
+    ],
+    "gaps": "ไม่ใส่ตัวชี้วัดหรือรายการหุ้นส่วนบุคคล: แหล่ง Berkshire ทางการที่ตรวจสอบเป็นข้อมูลชีวประวัติ/ตำแหน่งและรายงานบริษัท ไม่ได้ให้ผลตอบแทนส่วนบุคคล ความมั่งคั่งสุทธิ หรือรายชื่อพอร์ตส่วนตัวที่ใช้ยืนยันได้; ตัวชี้วัด net-assets และ expense-ratio ในสคีมาเป็นตัวชี้วัดกองทุน ไม่ใช่ตัวชี้วัดของนักลงทุนรายบุคคล.",
+    "holdings": [],
+    "id": "warren-buffett",
+    "kind": "investor",
+    "metrics": [],
+    "name": "Warren Buffett",
+    "role": "Chairman Emeritus และกรรมการ Berkshire Hathaway Inc. (มีผล 2026-09-18)",
+    "summary": "วอร์เรน อี. บัฟเฟตต์ เป็นนักลงทุนซึ่งมีความเกี่ยวข้องกับ Berkshire Hathaway ตั้งแต่ปี 1965; ตามประกาศ Berkshire วันที่ 2026-09-18 เขาเป็น Chairman Emeritus และกรรมการบริษัท ไม่ใช่ประธานหรือ CEO ในปัจจุบันตามแหล่งดังกล่าว",
+    "ticker": "",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  },
+  {
+    "facts": [
+      {
+        "asOf": "2026-10-09",
+        "excerpt": "Ray Dalio founded Bridgewater in 1975 from his two-bedroom apartment",
+        "label": "การก่อตั้ง",
+        "sourceTitle": "Our Founder — Bridgewater Associates",
+        "sourceUrl": "https://www.bridgewater.com/our-founder",
+        "text": "Ray Dalio ก่อตั้ง Bridgewater ในปี 1975 จากอพาร์ตเมนต์สองห้องนอนของเขาในนิวยอร์ก"
+      },
+      {
+        "asOf": "2026-10-09",
+        "excerpt": "He stepped down from being CEO in 2017, as CIO in the summer of 2020, as Chairman at the end of 2021, and is now focused on mentoring those at Bridgewater and beyond.",
+        "label": "บทบาทใน Bridgewater",
+        "sourceTitle": "Our Founder — Bridgewater Associates",
+        "sourceUrl": "https://www.bridgewater.com/our-founder",
+        "text": "เขาเคยดำรงตำแหน่ง CEO, CIO และประธานกรรมการของ Bridgewater; หน้าอย่างเป็นทางการระบุว่าเขาถอยจากตำแหน่งเหล่านี้ในปี 2017, 2020 และ 2021 ตามลำดับ และปัจจุบันมุ่งให้คำปรึกษาและถ่ายทอดหลักการ"
+      },
+      {
+        "asOf": "2026-10-09",
+        "excerpt": "Ray built Bridgewater’s investment approach around achieving a timeless and universal understanding of how economies and markets work and developing principles for dealing with them well.",
+        "label": "กรอบแนวทางลงทุน",
+        "sourceTitle": "Our Founder — Bridgewater Associates",
+        "sourceUrl": "https://www.bridgewater.com/our-founder",
+        "text": "Bridgewater อธิบายว่าแนวทางลงทุนของบริษัทที่ Dalio วางรากฐานมุ่งทำความเข้าใจเศรษฐกิจและตลาดจากกรณีในอดีต เพื่อพัฒนาหลักการ แล้วทดสอบย้อนหลังและนำไปใช้ในระบบตัดสินใจทั้งแบบคอมพิวเตอร์และมนุษย์ โดยจัดการความเสี่ยงตามระดับที่ลูกค้าต้องการ"
+      },
+      {
+        "asOf": "2026-10-09",
+        "excerpt": "Being explicit about your principles and stress-testing them improves your decision making and likelihood of success.",
+        "label": "หลักการพัฒนาวิธีคิด",
+        "sourceTitle": "Our Founder — Bridgewater Associates",
+        "sourceUrl": "https://www.bridgewater.com/our-founder",
+        "text": "คำอธิบายของ Bridgewater ระบุว่า Dalio ศึกษากรณีที่เกิดซ้ำเพื่อค้นหาความสัมพันธ์เชิงเหตุและผล และทำหลักการให้ชัดเจนพร้อมทดสอบความทนทานเพื่อช่วยปรับปรุงการตัดสินใจ"
+      }
+    ],
+    "gaps": "หน้าแหล่งข้อมูลชีวประวัติของ Bridgewater ไม่แสดงวันที่เผยแพร่ จึงใช้ 2026-10-09 เป็นวันเข้าถึง ไม่ใช่วันเผยแพร่; ไม่พบเอกสารทางการที่ระบุวันชัดเจนและให้ตัวชี้วัดส่วนบุคคลที่เข้าเกณฑ์ จึงไม่ใส่ metrics และไม่อนุมานผลตอบแทนหรือความมั่งคั่งส่วนตัวจากผลงานของ Bridgewater; ไม่พบรายการ holdings ส่วนบุคคลที่ยืนยันได้จากแหล่งทางการ จึงเว้นว่าง",
+    "holdings": [],
+    "id": "ray-dalio",
+    "kind": "investor",
+    "metrics": [],
+    "name": "Ray Dalio",
+    "role": "ผู้ก่อตั้ง Bridgewater Associates; อดีต CEO, CIO และประธานกรรมการ; ปัจจุบันมุ่งให้คำปรึกษาและถ่ายทอดหลักการตามหน้าอย่างเป็นทางการของ Bridgewater",
+    "summary": "Ray Dalio ก่อตั้ง Bridgewater Associates ในปี 1975; แนวทางลงทุนของ Bridgewater ที่หน้าอย่างเป็นทางการอธิบายว่าเขาวางรากฐาน เน้นทำความเข้าใจเศรษฐกิจและตลาดจากรูปแบบเหตุและผลในอดีต แล้วทดสอบหลักการและใช้ระบบตัดสินใจโดยคำนึงถึงความเสี่ยง ทั้งนี้ข้อมูลนี้เป็นประวัติและแนวทางของกิจการ ไม่ใช่ผลตอบแทนหรือสินทรัพย์ส่วนบุคคลของ Dalio",
+    "ticker": "",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  },
+  {
+    "facts": [
+      {
+        "asOf": "2026-04-28",
+        "excerpt": "Vanguard S&P 500 ETF, an exchange-traded share class of Vanguard 500 Index Fund (the “Fund”) ... Vanguard Fund Inception Date ... ETF Shares ... CUSIP Number ... 922908363; ชื่อเอกสารและหัวข้อ fund summary ใช้ Vanguard S&P 500 ETF; fact sheet ระบุ Trading information: Ticker symbol VOO.",
+        "label": "ประเภทหน่วยลงทุนและสัญลักษณ์",
+        "sourceTitle": "Vanguard S&P 500 ETF — Prospectus (28 เม.ย. 2026)",
+        "sourceUrl": "https://fund-docs.vanguard.com/p968.pdf",
+        "text": "Vanguard S&P 500 ETF เป็น share class แบบ exchange-traded ของ Vanguard 500 Index Fund; ticker คือ VOO."
+      },
+      {
+        "asOf": "2026-09-30",
+        "excerpt": "### Benchmark\nS&P 500 Index (SPTR)",
+        "label": "ดัชนีอ้างอิง",
+        "sourceTitle": "Vanguard S&P 500 ETF | VOO — Vanguard Advisor",
+        "sourceUrl": "https://advisors.vanguard.com/investments/products/voo/vanguard-sp-500-etf",
+        "text": "ดัชนีอ้างอิงคือ S&P 500 Index (SPTR)."
+      }
+    ],
+    "gaps": "Expense ratio prospectus dated 2026-04-28 ยืนยัน Total Annual Fund Operating Expenses 0.03% แต่เอกสารไม่ได้ติดป้าย gross/net แยกชัด จึงรักษาคำจำกัดความต้นทางและไม่สรุป basis ที่เอกสารไม่ระบุ; net assets รวมของกองทุนทุก share class ไม่ได้ใส่ เพราะอ้างอิงเฉพาะค่า VOO share class. ไม่มีข้อมูลผลตอบแทนรวมไว้ตามขอบเขตที่กำหนด.",
+    "holdings": [
+      {
+        "asOf": "2026-08-31",
+        "excerpt": "Holdings details as of 08/31/2026; NVIDIA Corp (NVDA) | 8.08%",
+        "name": "NVIDIA Corp",
+        "sourceTitle": "Vanguard S&P 500 ETF | VOO — Vanguard Advisor",
+        "sourceUrl": "https://advisors.vanguard.com/investments/products/voo/vanguard-sp-500-etf",
+        "ticker": "NVDA",
+        "weightPercent": 8.08
+      },
+      {
+        "asOf": "2026-08-31",
+        "excerpt": "Holdings details as of 08/31/2026; Apple Inc (AAPL) | 7.03%",
+        "name": "Apple Inc",
+        "sourceTitle": "Vanguard S&P 500 ETF | VOO — Vanguard Advisor",
+        "sourceUrl": "https://advisors.vanguard.com/investments/products/voo/vanguard-sp-500-etf",
+        "ticker": "AAPL",
+        "weightPercent": 7.03
+      },
+      {
+        "asOf": "2026-08-31",
+        "excerpt": "Holdings details as of 08/31/2026; Microsoft Corp (MSFT) | 5.69%",
+        "name": "Microsoft Corp",
+        "sourceTitle": "Vanguard S&P 500 ETF | VOO — Vanguard Advisor",
+        "sourceUrl": "https://advisors.vanguard.com/investments/products/voo/vanguard-sp-500-etf",
+        "ticker": "MSFT",
+        "weightPercent": 5.69
+      }
+    ],
+    "id": "voo",
+    "kind": "fund",
+    "metrics": [
+      {
+        "asOf": "2026-04-28",
+        "basis": "Total Annual Fund Operating Expenses ตาม prospectus; ไม่ระบุแยก gross/net",
+        "excerpt": "April 28, 2026 ... Annual Fund Operating Expenses ... Management Fees 0.02%; 12b-1 Distribution Fee None; Other Expenses 0.01%; Total Annual Fund Operating Expenses 0.03%.",
+        "key": "expense-ratio",
+        "sourceTitle": "Vanguard S&P 500 ETF — Prospectus (28 เม.ย. 2026)",
+        "sourceUrl": "https://fund-docs.vanguard.com/p968.pdf",
+        "unit": "%",
+        "value": 0.03
+      },
+      {
+        "asOf": "2026-09-30",
+        "basis": "สินทรัพย์สุทธิ VOO share class เท่านั้น ไม่ใช่ทุก share class ของ Vanguard 500 Index Fund",
+        "excerpt": "Net assets for VOO as of 09/30/2026 $1,032.3 B",
+        "key": "net-assets",
+        "sourceTitle": "Vanguard S&P 500 ETF | VOO — Vanguard Advisor",
+        "sourceUrl": "https://advisors.vanguard.com/investments/products/voo/vanguard-sp-500-etf",
+        "unit": "USD",
+        "value": 1032300000000
+      }
+    ],
+    "name": "Vanguard S&P 500 ETF (VOO)",
+    "role": "กองทุน ETF (ETF share class ของ Vanguard 500 Index Fund)",
+    "summary": "ข้อมูลอ้างอิงกองทุน ETF ที่ติดตามดัชนี S&P 500; เป็นข้อมูลข้อเท็จจริงจากเอกสาร Vanguard ไม่ใช่คำแนะนำซื้อขายหรือผลตอบแทน",
+    "ticker": "VOO",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  },
+  {
+    "facts": [
+      {
+        "asOf": "2026-10-08",
+        "excerpt": "The State Street ® SPDR ® S&P 500 ® ETF Trust seeks to provide investment results that, before expenses, correspond generally to the price and yield performance of the S&P 500 ® Index (the “Index”)",
+        "label": "ชื่อผลิตภัณฑ์และวัตถุประสงค์",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "text": "State Street® SPDR® S&P 500® ETF Trust มุ่งให้ผลการลงทุนก่อนค่าใช้จ่ายสอดคล้องโดยทั่วไปกับผลการดำเนินงานด้านราคาและผลตอบแทนของ S&P 500® Index"
+      },
+      {
+        "asOf": "2026-10-08",
+        "excerpt": "Benchmark | S&P 500 Index",
+        "label": "ดัชนีอ้างอิง",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "text": "ดัชนีอ้างอิงคือ S&P 500 Index ซึ่งออกแบบมาเพื่อวัดตลาดหุ้นสหรัฐฯ ขนาดใหญ่และถ่วงน้ำหนักตามมูลค่าหลักทรัพย์ตามราคาตลาดที่ปรับด้วย free float"
+      }
+    ],
+    "gaps": "ไม่ใส่ net-assets: หน้า issuer ระบุ Assets Under Management แต่ไม่ได้ยืนยันว่าเป็น net assets จึงไม่เปลี่ยนป้ายหรือขอบเขตของตัวเลข; prospectus SEC ที่ตรวจสอบลงวันที่ 2026-01-26. ไม่รวมผลตอบแทน.",
+    "holdings": [
+      {
+        "asOf": "2026-10-07",
+        "excerpt": "Fund Top Holdings as of Oct 07 2026 | NVIDIA CORP | Weight 8.55%",
+        "name": "NVIDIA CORP",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "ticker": "NVDA",
+        "weightPercent": 8.55
+      },
+      {
+        "asOf": "2026-10-07",
+        "excerpt": "Fund Top Holdings as of Oct 07 2026 | APPLE INC | Weight 7.31%",
+        "name": "APPLE INC",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "ticker": "AAPL",
+        "weightPercent": 7.31
+      },
+      {
+        "asOf": "2026-10-07",
+        "excerpt": "Fund Top Holdings as of Oct 07 2026 | MICROSOFT CORP | Weight 5.85%",
+        "name": "MICROSOFT CORP",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "ticker": "MSFT",
+        "weightPercent": 5.85
+      }
+    ],
+    "id": "spy",
+    "kind": "fund",
+    "metrics": [
+      {
+        "asOf": "2026-10-08",
+        "basis": "อัตราค่าใช้จ่ายดำเนินงานรวมต่อปีแบบ gross ก่อนหักการยกเว้นค่าธรรมเนียมหรือการชดเชยค่าใช้จ่าย (gross expense ratio)",
+        "excerpt": "Fund Information as of Oct 08 2026 ... Gross Expense Ratio ... The fund's total annual operating expense ratio. It is gross of any fee waivers or expense reimbursements. ... 0.0945%",
+        "key": "expense-ratio",
+        "sourceTitle": "SPY: State Street® SPDR® S&P 500® ETF Trust — State Street Investment Management",
+        "sourceUrl": "https://www.ssga.com/us/en/intermediary/etfs/state-street-spdr-sp-500-etf-trust-spy",
+        "unit": "%",
+        "value": 0.0945
+      }
+    ],
+    "name": "SPDR S&P 500 ETF Trust (SPY)",
+    "role": "กองทุนทรัสต์ ETF ที่ติดตามดัชนี S&P 500",
+    "summary": "กองทุนทรัสต์ ETF ที่มุ่งให้ผลการลงทุนก่อนค่าใช้จ่ายสอดคล้องโดยทั่วไปกับผลตอบแทนด้านราคาและผลตอบแทนจากรายได้ของดัชนี S&P 500; ข้อมูลนี้เป็นรายการอ้างอิงเชิงข้อมูล ไม่ใช่คำแนะนำซื้อขายหรือผลตอบแทนของผู้ลงทุน",
+    "ticker": "SPY",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  },
+  {
+    "facts": [
+      {
+        "asOf": "2026-10-09",
+        "excerpt": "2026 | First quarter | Second quarter; 2025 | First quarter | Second quarter | Third quarter | Annual report.",
+        "label": "รายงานล่าสุด",
+        "sourceTitle": "Berkshire Hathaway Inc. — Annual & Interim Reports",
+        "sourceUrl": "https://www.berkshirehathaway.com/reports.html",
+        "text": "เว็บไซต์ทางการแสดงรายงานประจำปี 2025 และรายงานไตรมาส 1 และ 2 ปี 2026; ดังนั้นรายงานประจำปีล่าสุดที่แสดงคือปี 2025 และรายงานระหว่างกาลล่าสุดที่แสดง ณ วันเข้าถึงคือ Q2 2026."
+      },
+      {
+        "asOf": "2025-12-31",
+        "excerpt": "Berkshire is a unique conglomerate, intentionally designed to allocate capital rationally and efficiently. Insurance is our core, and we also hold substantial investments in businesses across many other sectors. ... Our non-insurance group is composed of strong businesses operating within the railroad, utilities and energy, manufacturing, service and retailing industries.",
+        "label": "บทบาทบริษัท",
+        "sourceTitle": "Berkshire Hathaway Inc. 2025 Annual Report and Form 10-K",
+        "sourceUrl": "https://www.berkshirehathaway.com/2025ar/2025ar.pdf",
+        "text": "เบิร์กเชียร์อธิบายตนเองว่าเป็นกลุ่มบริษัทที่ออกแบบเพื่อจัดสรรเงินทุน โดยประกันภัยเป็นแกนหลัก และถือการลงทุนในธุรกิจหลายภาคส่วน นอกจากนี้ยังมีธุรกิจดำเนินงานที่ไม่ใช่ประกันภัยในอุตสาหกรรมรถไฟ สาธารณูปโภคและพลังงาน การผลิต บริการ และค้าปลีก จึงทำหน้าที่เป็นบริษัทแม่/ผู้จัดสรรทุน ไม่ใช่เพียงกองทุนหุ้น."
+      },
+      {
+        "asOf": "2026-06-30",
+        "excerpt": "Class A Common Stock — BRK.A — New York Stock Exchange; Class B Common Stock — BRK.B — New York Stock Exchange.",
+        "label": "หุ้นสามัญที่จดทะเบียน",
+        "sourceTitle": "Berkshire Hathaway Inc. Form 10-Q for quarter ended June 30, 2026",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526341032/brka-20260630.htm",
+        "text": "หุ้นสามัญ Berkshire Hathaway Class A และ Class B จดทะเบียนซื้อขายในตลาดหลักทรัพย์นิวยอร์กภายใต้สัญลักษณ์ BRK.A และ BRK.B ตามลำดับ."
+      }
+    ],
+    "gaps": "ไม่มี metrics: expense ratio และ net assets เป็นตัวชี้วัดกองทุน/คลาสหน่วยลงทุน ไม่เหมาะกับบริษัทจดทะเบียนนี้ จึงไม่แทนด้วยสินทรัพย์หรือพอร์ตหุ้นของบริษัท รายงาน Q2 2026 ระบุชื่อหุ้นรายใหญ่ห้าอันดับ แต่ไม่ได้ให้มูลค่ารายตัวในข้อความที่ใช้ จึงเว้น weightPercent เป็น null; ไม่ใช้เปอร์เซ็นต์การถือหุ้นในบริษัทปลายทางแทนน้ำหนักพอร์ต และไม่ตีความพอร์ตหุ้นเป็นสินทรัพย์รวมของ Berkshire หรือทรัพย์สินส่วนตัวของ Warren Buffett.",
+    "holdings": [
+      {
+        "asOf": "2026-06-30",
+        "excerpt": "The five largest holdings at June 30, 2026 were Alphabet Inc., American Express Company, Apple Inc., Bank of America Corporation and The Coca-Cola Company.",
+        "name": "Apple Inc.",
+        "sourceTitle": "Berkshire Hathaway Inc. Form 10-Q for quarter ended June 30, 2026, Note 4",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526341032/brka-20260630.htm",
+        "ticker": "AAPL",
+        "weightPercent": null
+      },
+      {
+        "asOf": "2026-06-30",
+        "excerpt": "The five largest holdings at June 30, 2026 were Alphabet Inc., American Express Company, Apple Inc., Bank of America Corporation and The Coca-Cola Company.",
+        "name": "American Express Company",
+        "sourceTitle": "Berkshire Hathaway Inc. Form 10-Q for quarter ended June 30, 2026, Note 4",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526341032/brka-20260630.htm",
+        "ticker": "AXP",
+        "weightPercent": null
+      },
+      {
+        "asOf": "2026-06-30",
+        "excerpt": "The five largest holdings at June 30, 2026 were Alphabet Inc., American Express Company, Apple Inc., Bank of America Corporation and The Coca-Cola Company.",
+        "name": "The Coca-Cola Company",
+        "sourceTitle": "Berkshire Hathaway Inc. Form 10-Q for quarter ended June 30, 2026, Note 4",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067983/000119312526341032/brka-20260630.htm",
+        "ticker": "KO",
+        "weightPercent": null
+      }
+    ],
+    "id": "berkshire-hathaway",
+    "kind": "company",
+    "metrics": [],
+    "name": "Berkshire Hathaway",
+    "role": "กลุ่มบริษัทและบริษัทแม่ผู้จัดสรรเงินทุน มีธุรกิจประกันภัยและธุรกิจดำเนินงานหลายอุตสาหกรรม รวมถึงลงทุนในหุ้นบริษัทอื่น",
+    "summary": "เบิร์กเชียร์ ฮาธาเวย์เป็นกลุ่มบริษัท/บริษัทแม่ที่จัดสรรเงินทุน มีธุรกิจประกันภัยเป็นแกนหลัก ถือครองธุรกิจดำเนินงานในหลายอุตสาหกรรม และลงทุนในหุ้นบริษัทจดทะเบียน รายงานประจำปีล่าสุดที่ระบุบนเว็บไซต์ ณ 2026-10-09 คือปี 2025; รายงานระหว่างกาลล่าสุดที่แสดงคือไตรมาส 2 ปี 2026.",
+    "ticker": "BRK.A / BRK.B",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  },
+  {
+    "facts": [
+      {
+        "asOf": "2025-09-27",
+        "excerpt": "Apple Inc. (Exact name of Registrant as specified in its charter); Common Stock ... Trading symbol(s) AAPL ... The Nasdaq Stock Market LLC.",
+        "label": "ชื่อและหลักทรัพย์จดทะเบียน",
+        "sourceTitle": "Apple Inc. 2025 Form 10-K (SEC)",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "text": "ผู้ออกหลักทรัพย์คือ Apple Inc.; หุ้นสามัญมีสัญลักษณ์ AAPL และจดทะเบียนในตลาด Nasdaq Stock Market LLC."
+      },
+      {
+        "asOf": "2025-09-27",
+        "excerpt": "The Company designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services.",
+        "label": "ธุรกิจ",
+        "sourceTitle": "Apple Inc. 2025 Form 10-K (SEC)",
+        "sourceUrl": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/aapl-20250927.htm",
+        "text": "บริษัทออกแบบ ผลิต และทำตลาดสมาร์ตโฟน คอมพิวเตอร์ส่วนบุคคล แท็บเล็ต อุปกรณ์สวมใส่และอุปกรณ์เสริม และจำหน่ายบริการที่เกี่ยวข้อง."
+      }
+    ],
+    "gaps": "ไม่รายงาน expense ratio หรือ net assets เพราะ Apple เป็นบริษัท ไม่ใช่กองทุน; จึงไม่มีตัวชี้วัดกองทุนที่เข้าเกณฑ์ใน schema. ไม่แสดง holdings เพราะไม่มีข้อมูลพอร์ตการถือครองในฐานะกองทุน/นักลงทุนที่เกี่ยวข้อง และไม่ได้อ้างตำแหน่งผู้ถือหุ้นปัจจุบัน; ความสัมพันธ์กับกองทุนให้นำเข้าจาก fundresearch แยกต่างหาก.",
+    "holdings": [],
+    "id": "apple",
+    "kind": "company",
+    "metrics": [],
+    "name": "Apple Inc.",
+    "role": "บริษัทผู้รับการลงทุน (investee); ไม่ใช่กองทุนหรือนักลงทุน",
+    "summary": "Apple Inc. เป็นบริษัทจดทะเบียนในตลาด Nasdaq ภายใต้สัญลักษณ์ AAPL โดยออกแบบ ผลิต และทำตลาดสมาร์ตโฟน คอมพิวเตอร์ส่วนบุคคล แท็บเล็ต อุปกรณ์สวมใส่และอุปกรณ์เสริม รวมถึงจำหน่ายบริการที่เกี่ยวข้อง ตามรายงาน Form 10-K ปีงบประมาณ 2025.",
+    "ticker": "AAPL",
+    "retrievedAt": "2026-10-09T04:14:18.351Z"
+  }
+]

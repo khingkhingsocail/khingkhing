@@ -1,0 +1,111 @@
+.feed-scroll--swipe {
+  touch-action: pan-x pinch-zoom;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior-y: contain;
+}
+.feed-scroll--swipe .short-post {
+  height: var(--feed-post-height, calc(100dvh - 100px));
+  min-height: 0;
+  scroll-snap-stop: always;
+}
+.feed-scroll--swipe:focus-visible {
+  outline: 2px solid var(--app-cyan);
+  outline-offset: -2px;
+}
+.personal-feed-settings {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px 12px;
+  padding: 7px 10px;
+  background: #090d12;
+  color: #c1cdd0;
+  font-size: 10px;
+  z-index: 4;
+}
+.personal-feed-settings button {
+  border: 1px solid #344044;
+  border-radius: 99px;
+  padding: 4px 8px;
+  color: #d9ff55;
+  background: #141b20;
+  cursor: pointer;
+  font-size: 10px;
+}
+.personal-feed-settings button:focus-visible,
+.feed-step-buttons button:focus-visible {
+  outline: 2px solid var(--app-cyan);
+  outline-offset: 3px;
+}
+.personal-feed-reason {
+  color: #d9ff55 !important;
+  font-size: 10px !important;
+  margin-bottom: 7px !important;
+}
+.feed-step-buttons {
+  position: absolute;
+  right: 14px;
+  bottom: 22px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.feed-step-buttons button {
+  border: 1px solid #627174;
+  background: #111820de;
+  border-radius: 50%;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+@media (max-width: 680px) {
+  .personal-feed-settings {
+    position: absolute;
+    top: calc(env(safe-area-inset-top, 0px) + 61px);
+    left: 0;
+    right: 0;
+    padding: 3px 8px;
+    background: linear-gradient(#0009, #0004);
+    font-size: 9px;
+  }
+  .personal-feed-settings button {
+    font-size: 9px;
+    padding: 2px 5px;
+  }
+  .feed-scroll--swipe .short-post {
+    height: var(--feed-post-height, 100dvh);
+  }
+  .feed-step-buttons {
+    right: auto;
+    left: 13px;
+    bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+    flex-direction: row;
+    gap: 7px;
+  }
+  .feed-step-buttons button {
+    width: 29px;
+    height: 29px;
+  }
+  .short-feed-page .short-post__topline {
+    top: calc(env(safe-area-inset-top, 0px) + 102px);
+  }
+  .short-feed-page .short-post-views {
+    top: calc(env(safe-area-inset-top, 0px) + 130px);
+  }
+  .personal-feed-reason {
+    font-size: 9px !important;
+  }
+  .short-feed-page .short-action-rail {
+    gap: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .feed-scroll--swipe {
+    scroll-behavior: auto;
+  }
+}

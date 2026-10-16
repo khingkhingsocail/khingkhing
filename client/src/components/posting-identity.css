@@ -1,0 +1,42 @@
+.posting-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  margin: 14px 0;
+  border: 1px solid rgba(117, 233, 236, 0.24);
+  border-radius: 12px;
+  background: rgba(117, 233, 236, 0.05);
+  color: #edf3f3;
+  font-size: 12px;
+}
+.posting-identity__avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  background: #1f3334;
+  color: #d9ff55;
+  font-weight: 700;
+}
+.posting-identity__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.posting-identity strong,
+.posting-identity div > span {
+  display: block;
+}
+.posting-identity p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: #a9b9ba;
+  line-height: 1.7;
+}
+.posting-identity small {
+  color: #dfcb92;
+}

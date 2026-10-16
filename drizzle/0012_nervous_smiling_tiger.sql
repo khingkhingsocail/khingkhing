@@ -1,0 +1,2 @@
+ALTER TABLE `arena_public_references` ADD `group_key` varchar(150) NOT NULL;--> statement-breakpoint
+ALTER TABLE `arena_public_references` ADD CONSTRAINT `arena_public_reference_person_group_unique` UNIQUE(`person_id`,`group_key`);

@@ -1,0 +1,1 @@
+ALTER TABLE `arena_profiles` MODIFY COLUMN `avatar` mediumtext;

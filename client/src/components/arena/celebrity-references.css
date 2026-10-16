@@ -1,0 +1,297 @@
+.celebrity-references {
+  margin: 24px 0;
+  padding: 22px;
+  border: 1px solid rgba(117, 233, 236, 0.22);
+  border-radius: 16px;
+  background: linear-gradient(135deg, #142026, #0b1218);
+  color: #e5eff0;
+}
+.celebrity-references__heading,
+.celebrity-reference-detail header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+}
+.celebrity-references__heading p {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  color: #75e9ec;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  margin: 0 0 8px;
+}
+.celebrity-references h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.celebrity-references__notice,
+.celebrity-references__scope,
+.celebrity-references__empty {
+  color: #a9babc;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.celebrity-references__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: end;
+  margin: 18px 0 12px;
+}
+.celebrity-references__controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #a9babc;
+  font-size: 11px;
+  flex: 1 1 250px;
+}
+.celebrity-references__controls select,
+.celebrity-references__controls input {
+  width: 100%;
+  min-height: 40px;
+  background: #111a20;
+  border: 1px solid #2e3c42;
+  border-radius: 8px;
+  padding: 9px;
+  color: #edf5f5;
+}
+.celebrity-references__controls .celebrity-references__search {
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 180px;
+}
+.celebrity-reference-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.celebrity-reference-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #30424b;
+  border-radius: 12px;
+  background: #111b23;
+}
+.celebrity-reference-card--champion {
+  border-color: #b68b32;
+  background: linear-gradient(100deg, #2b2415, #121b22);
+}
+.celebrity-reference-card--challenger {
+  border-color: #7f97a8;
+}
+.celebrity-reference-card--elite {
+  border-color: #9b6850;
+}
+.celebrity-reference-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+  min-width: 0;
+}
+.celebrity-reference-avatar {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  flex: 0 0 auto;
+  border: 2px solid #75e9ec;
+  border-radius: 50%;
+  font-size: 23px;
+  background: #182c32;
+}
+.celebrity-reference-card--champion .celebrity-reference-avatar {
+  border-color: #dfb756;
+  color: #e7c45e;
+}
+.celebrity-reference-avatar i {
+  position: absolute;
+  bottom: -6px;
+  font-size: 10px;
+  font-style: normal;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: #253841;
+}
+.celebrity-reference-identity small {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 9px;
+  color: #a9c4c6;
+}
+.celebrity-reference-identity strong {
+  display: block;
+  font-size: 16px;
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+}
+.celebrity-reference-identity em {
+  display: block;
+  color: #91a7b3;
+  font-style: normal;
+  font-size: 10px;
+}
+.celebrity-reference-score {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 5px;
+}
+.celebrity-reference-score strong {
+  font-size: 22px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.celebrity-reference-score span {
+  color: #8fa7b1;
+  font-size: 10px;
+}
+.celebrity-reference-score a,
+.celebrity-reference-detail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #75e9ec;
+  font-size: 11px;
+}
+.celebrity-reference-detail {
+  margin-top: 16px;
+  padding: 18px;
+  border: 1px solid #344954;
+  border-radius: 12px;
+  background: #10191e;
+  font-size: 12px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.celebrity-reference-detail h4 {
+  margin: 0;
+  font-size: 15px;
+}
+.celebrity-reference-detail blockquote {
+  padding: 10px 14px;
+  border-left: 2px solid #75e9ec;
+  background: #14262b;
+  margin: 16px 0;
+}
+.celebrity-reference-detail dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 18px;
+}
+.celebrity-reference-detail dt {
+  color: #8fa7b1;
+}
+.celebrity-reference-detail dd {
+  margin: 0;
+}
+.celebrity-references button:focus-visible,
+.celebrity-references a:focus-visible {
+  outline: 2px solid #d9ff55;
+  outline-offset: 4px;
+}
+@media (max-width: 680px) {
+  .celebrity-references {
+    padding: 15px;
+  }
+  .celebrity-references__heading {
+    align-items: start;
+    flex-direction: column;
+  }
+  .celebrity-reference-card {
+    flex-wrap: wrap;
+  }
+  .celebrity-reference-score {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+  }
+  .celebrity-reference-score strong {
+    font-size: 21px;
+  }
+  .celebrity-reference-score a {
+    margin-left: auto;
+  }
+  .celebrity-reference-detail dl {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .celebrity-reference-detail dd {
+    margin-bottom: 7px;
+  }
+}
+
+.celebrity-references__browse {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 14px 0;
+}
+.celebrity-references__browse span {
+  font-size: 11px;
+  color: #a9babc;
+}
+.celebrity-references__browse button[aria-pressed="true"] {
+  border-color: #75e9ec;
+  color: #d9ff55;
+  background: #17292d;
+}
+.celebrity-person-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.celebrity-person-stats article {
+  border-top: 1px solid #344954;
+  padding-top: 15px;
+}
+.celebrity-person-stats h5 {
+  font-size: 14px;
+  color: #b5dce2;
+  margin: 0 0 7px;
+}
+.celebrity-person-stats article > strong {
+  font-size: 24px;
+  color: #e6efba;
+  font-variant-numeric: tabular-nums;
+}
+.celebrity-person-stats blockquote {
+  font-size: 11px;
+}
+
+.celebrity-directory {
+  margin: 15px 0;
+  padding: 12px;
+  border: 1px solid #344954;
+  border-radius: 10px;
+}
+.celebrity-directory summary {
+  cursor: pointer;
+  font-size: 12px;
+  color: #b5dce2;
+}
+.celebrity-directory > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.celebrity-directory button {
+  font-size: 11px;
+}

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "buffett-historical-return",
+    "investor": "Warren Buffett",
+    "organization": "Berkshire Hathaway — มูลค่าตลาดต่อหุ้น",
+    "submitted": {
+      "value": 19.7,
+      "period": "1965–2025",
+      "basis": "แบบทบต้น",
+      "sourceUrl": "https://berkshirehathaway.com/2025ar/2025ar.pdf"
+    },
+    "reportedValue": 19.7,
+    "reportedPeriod": "1965–2025",
+    "reportedBasis": "อัตราการเพิ่มขึ้นแบบทบต้นต่อปี (CAGR) ของมูลค่าตลาดต่อหุ้น Berkshire Hathaway; เทียบกับ S&P 500 ที่รวมเงินปันผล",
+    "status": "confirmed",
+    "summary": "ยืนยันค่า 19.7% ตามรายงานประจำปี 2025 ของ Berkshire Hathaway: ตารางระบุ Compounded Annual Gain สำหรับปี 1965–2025 ที่ 19.7% และ S&P 500 (รวมเงินปันผล) ที่ 10.5%",
+    "caveats": "รายงานเรียกตัวชี้วัด Berkshire ว่า “Per-Share Market Value” ไม่ได้ระบุเป็นผลตอบแทนพอร์ตส่วนบุคคลของ Buffett หรือระบุว่าหักค่าธรรมเนียมใดบ้าง; อย่าตีความเป็นผลตอบแทนหลังค่าธรรมเนียม รายงานระบุผลตอบแทนรายปีและค่า compounded annual gain ไม่ใช่ค่าเฉลี่ยเลขคณิต 1965 และ 1966 เป็นปีสิ้นสุด 30 ก.ย. ตามหมายเหตุของตาราง (และปี 1967 เป็นช่วง 15 เดือนสิ้นสุด 31 ธ.ค.) จึงควรคงคำเรียกช่วงตามตาราง 1965–2025 แต่รับทราบข้อยกเว้นนี้ ข้อความต้นทางที่แม่นยำกว่าคำว่า “ผลตอบแทนราคาหุ้น” คือการเปลี่ยนแปลงมูลค่าตลาดต่อหุ้น; ไม่ได้แก้ค่า input",
+    "sources": [
+      {
+        "excerpt": "“Compounded Annual Gain – 1965-2025” Berkshire 19.7%; S&P 500 10.5%. ปี 1974: (48.7)% และ (26.4)%.",
+        "retrievedAt": "2026-10-09",
+        "supports": "ค่า 19.7%, ช่วง 1965–2025, วิธีรายงานแบบ compounded annual gain, ผลตอบแทน S&P 500 รวมเงินปันผล 10.5%, และผลตอบแทน Berkshire ในปี 1974 −48.7%",
+        "title": "Berkshire Hathaway Inc. 2025 Annual Report, หน้า 18–19",
+        "url": "https://berkshirehathaway.com/2025ar/2025ar.pdf"
+      }
+    ],
+    "extras": [
+      {
+        "confirmed": true,
+        "label": "S&P 500 dividends CAGR",
+        "sourceUrl": "https://berkshirehathaway.com/2025ar/2025ar.pdf",
+        "text": "10.5% compounded annual gain, 1965–2025; ตารางระบุ S&P 500 with dividends included"
+      },
+      {
+        "confirmed": true,
+        "label": "Berkshire 1974 annual return",
+        "sourceUrl": "https://berkshirehathaway.com/2025ar/2025ar.pdf",
+        "text": "−48.7% (ตารางแสดง (48.7)); S&P 500 with dividends included ในปีเดียวกัน −26.4%"
+      }
+    ]
+  },
+  {
+    "id": "lynch-historical-return",
+    "investor": "Peter Lynch",
+    "organization": "Fidelity Magellan Fund",
+    "submitted": {
+      "value": 29.2,
+      "period": "1977–1990",
+      "basis": "ผลตอบแทนเฉลี่ยต่อปี",
+      "sourceUrl": "https://www.marketwatch.com/story/more-famous-than-warren-buffett-in-decades-past-peter-lynch-of-fidelity-says-its-still-all-about-investing-in-what-you-know-808a7f8f"
+    },
+    "reportedValue": 29.2,
+    "reportedPeriod": "1977–1990 (13 ปี)",
+    "reportedBasis": "ผลตอบแทนรายปีแบบ annualized ตามแหล่งอ้างอิง; แหล่งที่อ่านได้ไม่ได้ระบุชัดว่าเป็น arithmetic average หรือบอกวิธีคำนวณทบต้น/นิยาม total return",
+    "status": "partial",
+    "summary": "คงค่า 29.2% และช่วง 1977–1990 ตามข้อมูลที่ให้มา: MarketWatch ระบุทั้งสองรายการ และ Investopedia ระบุ 29.2% ว่าเป็น annualized return. ยืนยันได้เฉพาะค่าที่รายงานและช่วงเวลา ไม่ยืนยันการรวมค่าธรรมเนียมหรือวิธีคำนวณอย่างแน่ชัด จึงจัดเป็น partial.",
+    "caveats": "คง input value 29.2 และ period 1977–1990 ไว้ ไม่คำนวณใหม่. MarketWatch ใช้ถ้อยคำ “averaging a 29.2% annual return”; Investopedia เรียก 29.2% ว่า annualized แต่แหล่งที่ตรวจไม่ได้อธิบายชัดว่าค่านี้เป็น CAGR/ผลตอบแทนทบต้นหรือ arithmetic mean และไม่ได้ระบุว่า net/gross of fees หรือหักค่าใช้จ่ายใดบ้าง. จึงไม่ควรแสดงสถานะยืนยันรายละเอียดฐานผลตอบแทนและค่าธรรมเนียม.",
+    "sources": [
+      {
+        "excerpt": "Lynch ... managed Fidelity Investment’s Magellan Fund between 1977 and 1990, averaging a 29.2% annual return.",
+        "retrievedAt": "2026-10-09",
+        "supports": "Supports value 29.2%, entity Magellan Fund, and period 1977–1990; does not define compounding or fee treatment.",
+        "title": "More famous than Warren Buffett in decades past, Peter Lynch of Fidelity says it’s still all about investing in what you know",
+        "url": "https://www.marketwatch.com/story/more-famous-than-warren-buffett-in-decades-past-peter-lynch-of-fidelity-says-its-still-all-about-investing-in-what-you-know-808a7f8f"
+      },
+      {
+        "excerpt": "The fund earned an annualized return of 29.2% during his time running it ... He took over management in 1977 ... led it for 13 years, retiring in 1990.",
+        "retrievedAt": "2026-10-09",
+        "supports": "Supports annualized wording for 29.2% and management period; does not state the fees included or explicitly describe calculation methodology.",
+        "title": "Who Is Peter Lynch?",
+        "url": "https://www.investopedia.com/terms/p/peterlynch.asp"
+      },
+      {
+        "excerpt": "Lynch ran Fidelity's Magellan Fund for thirteen years (1977-1990). In that period, Magellan was up over 2700%.",
+        "retrievedAt": "2026-10-09",
+        "supports": "Independent corroboration of the fund, 13-year period, and overall gain; does not state the 29.2% figure or fees.",
+        "title": "Betting on the Market: Interview with Peter Lynch",
+        "url": "https://www.pbs.org/wgbh/pages/frontline/shows/betting/pros/lynch.html"
+      }
+    ],
+    "extras": []
+  },
+  {
+    "id": "simons-historical-return",
+    "investor": "Jim Simons และทีม Renaissance",
+    "organization": "Medallion Fund",
+    "submitted": {
+      "value": 39,
+      "period": "1988–2021",
+      "basis": "ประมาณ 39% หลังค่าธรรมเนียม หรือ 66% ก่อนค่าธรรมเนียม",
+      "sourceUrl": "https://www.institutionalinvestor.com/article/2e0uykr3vn5booz0smrcw/hedge-funds/renaissances-2024-rebirth"
+    },
+    "reportedValue": 39,
+    "reportedPeriod": "1988–2021",
+    "reportedBasis": "39% ผลตอบแทนรายปีหลังค่าธรรมเนียม; 66% ก่อนค่าธรรมเนียม. Institutional Investor เรียกทั้งคู่ว่า annualized returns แต่ไม่ได้ระบุสูตรคำนวณชัดเจน",
+    "status": "partial",
+    "summary": "Institutional Investor ระบุตรง ๆ ว่า Medallion ทำผลตอบแทนรายปีแบบ annualized 66% ก่อนค่าธรรมเนียม หรือ 39% หลังค่าธรรมเนียม ในช่วง 1988–2021 จึงยืนยันตัวเลขและช่วงปีตามรายการได้ แต่ให้สถานะ partial เพราะยังยืนยันไม่ได้จากต้นทางว่าตัวเลขเหล่านี้ใช้ค่าเฉลี่ยเลขคณิตหรืออัตราทบต้น (โดยเฉพาะ 66%); แหล่งวิเคราะห์ข้อมูลช่วงก่อนหน้ารายงานความแตกต่างระหว่างสองวิธี",
+    "caveats": "คงค่า input 39 และช่วง 1988–2021 ตามบทความ Institutional Investor ซึ่งระบุสองตัวเลขไว้ในประโยคเดียวกันและระบุว่า annualized. อย่างไรก็ดี บทความไม่แจกแจงวิธี annualization และแหล่งรองให้ตัวเลข/ช่วงต่างกัน: Cornell ระบุค่าเฉลี่ยเลขคณิต gross 66.1% แต่ compound return 63.3% สำหรับ 1988–2018; Of Dollars and Data ระบุ 62% gross/37% net annualized สำหรับ 1988–2021; Quartr ระบุ net CAGR 39.9% ถึง 2022. อัตราค่าธรรมเนียม 5% management และ 44% performance ปรากฏในแหล่งรอง แต่ต้นทางที่ยืนยันช่วง 1988–2021 ไม่ได้แจกแจง fee schedule ตลอดช่วงนั้น",
+    "sources": [
+      {
+        "excerpt": "From 1988 to 2021, it generated a 66 percent annualized return before fees or 39 percent after fees.",
+        "retrievedAt": "2026-10-09",
+        "supports": "ยืนยัน 66% ก่อนค่าธรรมเนียมและ 39% หลังค่าธรรมเนียม โดยระบุช่วงปี 1988–2021 และคำว่า annualized; ไม่อธิบายสูตรหรือรายละเอียดค่าธรรมเนียม",
+        "title": "Renaissance’s 2024 Rebirth — Institutional Investor",
+        "url": "https://www.institutionalinvestor.com/article/2e0uykr3vn5booz0smrcw/hedge-funds/renaissances-2024-rebirth"
+      },
+      {
+        "excerpt": "the fund did have a large standard deviation of returns, 31.7%, but that was around an arithmetic mean of 66.1%",
+        "retrievedAt": "2026-10-09",
+        "supports": "ยกตัวอย่างว่าค่าเฉลี่ย arithmetic ของ gross returns ช่วง 1988–2018 คือ 66.1% และ compound return ในช่วงเดียวกัน 63.3%; เป็นช่วงเวลาอื่น จึงไม่ยืนยันสูตรของตัวเลข 66% ในปี 1988–2021 โดยตรง",
+        "title": "Medallion Fund The Ultimate Counterexample — Cornell Capital Group",
+        "url": "https://www.cornell-capital.com/blog/2020/02/medallion-fund-the-ultimate-counterexample.html"
+      },
+      {
+        "excerpt": "Renaissance’s flagship Medallion Fund generated 62% annualized returns (before fees) and 37% annualized returns (net of fees) from 1988-2021.",
+        "retrievedAt": "2026-10-09",
+        "supports": "แสดงตัวเลข annualized ของช่วงเดียวกันที่ต่างจาก II (62% gross/37% net) เป็นข้อควรระวังเรื่องความสอดคล้องของแหล่งรอง",
+        "title": "Why the Medallion Fund is the Greatest Money-Making Machine of All Time — Of Dollars and Data",
+        "url": "https://ofdollarsanddata.com/medallion-fund/"
+      },
+      {
+        "excerpt": "It’s returned on average – net – 39.9% to investors since 1988. ... this CAGR number is a highly theoretical exercise.",
+        "retrievedAt": "2026-10-09",
+        "supports": "อธิบายตัวเลข net 39.9% ว่าเป็น CAGR แต่ใช้ช่วง 1988–2022 ไม่ใช่ช่วงที่รายการตรวจ จึงช่วยประกอบการแยก annualized/CAGR เท่านั้น",
+        "title": "Renaissance Technologies: The Highest-Performing Investment Firm in History — Quartr",
+        "url": "https://quartr.com/insights/edge/renaissance-technologies-and-the-medallion-fund"
+      },
+      {
+        "excerpt": "The fund averaged 39% in annual returns.",
+        "retrievedAt": "2026-10-09",
+        "supports": "ระบุว่า 39% เป็นผลตอบแทนเฉลี่ยรายปี net และกล่าวถึง 5% fixed fee กับ 44% performance fee หลังปี 2002; ตารางข้อมูลที่แสดงสิ้นสุดปี 2018 จึงไม่ยืนยันช่วง 1988–2021",
+        "title": "The Growth of $100 Invested in Jim Simons’ Medallion Fund — Visual Capitalist",
+        "url": "https://www.visualcapitalist.com/growth-of-100-invested-in-jim-simons-medallion-fund/"
+      }
+    ],
+    "extras": [
+      {
+        "confirmed": true,
+        "label": "ตรวจช่วงปี 39%/66%",
+        "sourceUrl": "https://www.institutionalinvestor.com/article/2e0uykr3vn5booz0smrcw/hedge-funds/renaissances-2024-rebirth",
+        "text": "ยืนยัน: ต้นทาง Institutional Investor ระบุชัดว่า 39% หลังค่าธรรมเนียมและ 66% ก่อนค่าธรรมเนียมเป็นผลตอบแทน annualized สำหรับช่วง 1988–2021 (ไม่ใช่เพียงตัวเลขทั่วไปที่ไม่ระบุช่วง)"
+      }
+    ]
+  },
+  {
+    "id": "druckenmiller-historical-return",
+    "investor": "Stanley Druckenmiller",
+    "organization": "Duquesne Capital Management",
+    "submitted": {
+      "value": 30,
+      "period": "1981–2010",
+      "basis": "ประมาณ แบบทบต้น",
+      "sourceUrl": "https://www.morganstanley.com/insights/videos/hard-lessons/duquesne-stan-druckenmiller-iliana-bouzali"
+    },
+    "reportedValue": 30,
+    "reportedPeriod": "1981–2010",
+    "reportedBasis": "ประมาณ 30% ต่อปีแบบ annualized; แหล่งทางการไม่ระบุชัดว่าเป็น compound หรือ arithmetic และไม่ระบุ net/gross of fees",
+    "status": "partial",
+    "summary": "ยืนยันช่วง 1981–2010 และผลตอบแทน annualized ราว 30% ตาม Morgan Stanley; ยังยืนยันคำว่า ‘ทบต้น’ และสถานะหลังหักค่าธรรมเนียมไม่ได้ จึงคงค่า 30 ไว้แต่ระบุ basis ให้รอบคอบ",
+    "caveats": "ค่า 30 เป็นค่าประมาณจาก input และสอดคล้องกับคำว่า ‘roughly 30% annualized’ ในแหล่งทางการ ไม่พบการระบุสูตร compound/CAGR หรือค่าธรรมเนียมในแหล่งที่อ่านได้ จึงไม่ควรลงว่าเป็นทบต้นหรือ net/gross โดยไม่มีหลักฐานเพิ่ม ส่วนคำว่าไม่มีปีขาดทุนหมายถึงปีปฏิทิน ไม่ได้แปลว่าไม่มี drawdown ระหว่างปี; แหล่งยืนยันว่าเคยลงลึกระหว่างปี แต่ไม่ได้ระบุขนาดเป็นเปอร์เซ็นต์",
+    "sources": [
+      {
+        "excerpt": "Druckenmiller ran Duquesne Capital Management with roughly 30% annualized returns and no losing years from 1981 to 2010.",
+        "retrievedAt": "2026-10-09",
+        "supports": "ตัวเลขราว 30% แบบ annualized, การไม่มีปีขาดทุน และช่วงเวลาที่ระบุแน่ชัด 1981–2010; ไม่ได้ระบุวิธีคำนวณหรือค่าธรรมเนียม",
+        "title": "Hard Lessons: Stan Druckenmiller — Morgan Stanley",
+        "url": "https://www.morganstanley.com/insights/videos/hard-lessons/duquesne-stan-druckenmiller-iliana-bouzali"
+      },
+      {
+        "excerpt": "‘The no down years is true, but a lot of it is luck. I’ve been deep in the hole three or four years… December 31st, I happened to be up.’",
+        "retrievedAt": "2026-10-09",
+        "supports": "คำกล่าวของ Druckenmiller ยืนยันว่าผลปีปฏิทินบวกไม่ได้ตัดความเป็นไปได้ของการขาดทุนลึกระหว่างปี",
+        "title": "Hard Lessons: Stan Druckenmiller — Extended Audio Transcript, Morgan Stanley",
+        "url": "https://www.morganstanley.com/insights/videos/hard-lessons/duquesne-stan-druckenmiller-iliana-bouzali"
+      },
+      {
+        "excerpt": "‘I’ve been deep in the hole three or four years. And in every case, something came along, and it was just a coincidence of the calendar.’",
+        "retrievedAt": "2026-10-09",
+        "supports": "แหล่งรองถอดคำสัมภาษณ์ Talks at GS สอดคล้องกับคำกล่าวเรื่อง drawdown ระหว่างปีและผลตามวันสิ้นปี",
+        "title": "Stanley Druckenmiller: How To Avoid Down Years — Acquirer's Multiple",
+        "url": "https://acquirersmultiple.com/2021/02/stanley-druckenmiller-how-to-avoid-down-years/"
+      }
+    ],
+    "extras": [
+      {
+        "confirmed": true,
+        "label": "ไม่มีปีปฏิทินขาดทุน เทียบกับ drawdown ระหว่างปี",
+        "sourceUrl": "https://www.morganstanley.com/insights/videos/hard-lessons/duquesne-stan-druckenmiller-iliana-bouzali",
+        "text": "ยืนยันความแตกต่าง: Morgan Stanley ระบุว่าไม่มีปีขาดทุนในช่วง 1981–2010 และ Druckenmiller กล่าวว่ามีช่วงที่ขาดทุนลึกระหว่างปีจากความบังเอิญของจังหวะปฏิทิน; แหล่งนี้ไม่ได้ระบุขนาด drawdown เป็นเปอร์เซ็นต์"
+      }
+    ]
+  },
+  {
+    "id": "soros-historical-return",
+    "investor": "George Soros",
+    "organization": "Quantum Fund",
+    "submitted": {
+      "value": 30,
+      "period": "1970–2000",
+      "basis": "ประมาณ ตามรายงาน",
+      "sourceUrl": "https://www.investopedia.com/articles/investing/120913/george-investing-soros-way.asp"
+    },
+    "reportedValue": 30,
+    "reportedPeriod": "1970–2000",
+    "reportedBasis": "รายงานแหล่งรองว่าเป็นผลตอบแทนเฉลี่ยต่อปี แต่ไม่ได้ระบุว่าเป็น arithmetic หรือ compound/geometric และไม่ได้ผูกตัวเลข 30% กับค่าธรรมเนียมอย่างชัดเจน",
+    "status": "partial",
+    "summary": "ยืนยันได้เพียงว่ามีแหล่งรองรายงานผลตอบแทนเฉลี่ยต่อปี 30% ในช่วง 1970–2000; ยังยืนยันชนิดผลตอบแทนและยอดหลังหักค่าธรรมเนียมไม่ได้ จึงคงค่าเดิมไว้แบบ partial ไม่ใช่การยืนยันตัวเลขอย่างสมบูรณ์",
+    "caveats": "URL ที่ให้มาเปิดอ่านได้และระบุ 30% เฉลี่ยต่อปีระหว่าง 1970–2000 แต่บทความอ้าง Forbes ซึ่งเมื่อเปิดอ่านไม่ได้กล่าวถึงตัวเลขผลตอบแทนนี้ ขณะที่ Investopedia อีกบทความระบุราว 20% ต่อปีสำหรับช่วงเดียวกัน จึงมีรายงานขัดแย้งกัน NBER กล่าวถึงผลตอบแทนแบบ compounded annual เกิน 30% นานกว่าสองทศวรรษ แต่ไม่ได้ยืนยันช่วง 1970–2000 ที่แน่นอน และไม่ได้บอกชัดว่า 30% เป็นผลตอบแทนสุทธิค่าธรรมเนียมหรือไม่ ไม่ได้คำนวณใหม่: คง input 30 และช่วง 1970–2000 ตามเดิม แต่แนะนำให้แสดงสถานะ partial พร้อมคำเตือนเรื่องนิยาม/ความขัดแย้ง",
+    "sources": [
+      {
+        "excerpt": "Between 1970 and 2000, his fund achieved an average annual return of 30%.",
+        "retrievedAt": "2026-10-09",
+        "supports": "รองรับตัวเลข 30% และช่วง 1970–2000 ในฐานะค่าเฉลี่ยต่อปี; ไม่ระบุ arithmetic/compound หรือค่าธรรมเนียม บทความอ้าง Forbes แต่ต้นทางอ้างอิงนั้นไม่กล่าวถึงตัวเลขนี้",
+        "title": "By George: Investing the Soros Way — Investopedia",
+        "url": "https://www.investopedia.com/articles/investing/120913/george-investing-soros-way.asp"
+      },
+      {
+        "excerpt": "His Quantum Fund achieved an impressive average annual return of around 20% from 1970 to 2000.",
+        "retrievedAt": "2026-10-09",
+        "supports": "แสดงรายงานขัดแย้งจาก Investopedia อีกบทความหนึ่ง: ระบุราว 20% ต่อปีในช่วงเดียวกัน",
+        "title": "George Soros: Top 3 Legendary Currency Trades — Investopedia",
+        "url": "https://www.investopedia.com/articles/investing/090815/3-best-investments-george-soros-ever-made.asp"
+      },
+      {
+        "excerpt": "Quantum Fund, which generated an average annual return of 30% over a 30-year period from 1970 to 2000.",
+        "retrievedAt": "2026-10-09",
+        "supports": "แหล่งรองอีกแห่งรองรับการรายงาน 30% เฉลี่ยต่อปีในช่วง 1970–2000; ไม่ชี้แจงวิธีคำนวณหรือค่าธรรมเนียม",
+        "title": "Billionaire George Soros' 7 Top Stock Picks — U.S. News",
+        "url": "https://money.usnews.com/investing/articles/george-soros-top-stock-picks"
+      },
+      {
+        "excerpt": "Quantum Fund managed by George Soros, boasts compounded annual returns exceeding 30% for more than two decades.",
+        "retrievedAt": "2026-10-09",
+        "supports": "งานวิชาการกล่าวถึงผลตอบแทนแบบ compounded เกิน 30% นานกว่า 20 ปี แต่ไม่ยืนยันปีเริ่ม-สิ้นสุด 1970–2000 หรือว่าเป็นสุทธิค่าธรรมเนียมหรือไม่",
+        "title": "Offshore Hedge Funds: Survival and Performance 1989–1995 — NBER Working Paper 5909",
+        "url": "https://www.nber.org/system/files/working_papers/w5909/w5909.pdf"
+      },
+      {
+        "excerpt": "It has generated significant annual returns after management fees, and the flagship—Quantum Fund—is revered by investors.",
+        "retrievedAt": "2026-10-09",
+        "supports": "กล่าวโดยทั่วไปว่ากลุ่มกองทุนสร้างผลตอบแทนรายปีหลัง management fees แต่ไม่ได้ยربطตัวเลข 30% หรือช่วง 1970–2000 เข้ากับผลตอบแทนสุทธิ",
+        "title": "George Soros: Insights From a Legendary Investor — Investopedia",
+        "url": "https://www.investopedia.com/articles/financial-theory/09/how-soros-does-it.asp"
+      }
+    ],
+    "extras": []
+  },
+  {
+    "id": "ackman-historical-return",
+    "investor": "Bill Ackman",
+    "organization": "Pershing Square — PSLP → PSH",
+    "submitted": {
+      "value": 15.9,
+      "period": "1 ม.ค. 2004–10 ก.พ. 2026",
+      "basis": "สุทธิหลังค่าธรรมเนียม แบบทบต้น",
+      "sourceUrl": "https://in.marketscreener.com/news/pershing-square-letter-to-shareholders-in-the-2025-annual-report-ce7e5ddfd98ff620"
+    },
+    "reportedValue": 15.9,
+    "reportedPeriod": "1 ม.ค. 2004–10 ก.พ. 2026",
+    "reportedBasis": "ผลตอบแทน NAV สุทธิ PSLP/PSH (สมมติลงทุนใน PSLP ตั้งแต่วันเริ่มต้นและแปลงเป็น PSH เมื่อเริ่มกอง) ระบุเป็น Compound Annual Return หรือผลตอบแทนทบต้นรายปีแบบ annualized ไม่ใช่ค่าเฉลี่ย arithmetic ของผลตอบแทนรายปี",
+    "status": "confirmed",
+    "summary": "ยืนยัน 15.9% สำหรับช่วง 1 ม.ค. 2004–10 ก.พ. 2026 ตามตารางผลการดำเนินงานในรายงานประจำปี 2025 ของ PSH: แถวระบุทั้งช่วงและ Compound Annual Return ใต้คอลัมน์ PSLP/PSH Net Return.",
+    "caveats": "ตัวเลขเป็นผลตอบแทน NAV สุทธิของเส้นทางลงทุน PSLP→PSH ตามสมมติฐานในรายงาน ไม่ใช่ผลตอบแทนราคาหุ้น PSH หรือบัญชีของนักลงทุนทุกคน; รายงานระบุ net return และ compound annual return สำหรับช่วงเต็มถึง 10 ก.พ. 2026. เอกสาร SEC อธิบายว่าผลตอบแทนสะสม PSLP→PSH ถึง 31 ธ.ค. 2025 หัก performance fees, management fees และค่าใช้จ่ายอื่นแล้ว; SEC excerpt นี้ไม่ครอบคลุมช่วง 1 ม.ค.–10 ก.พ. 2026 โดยตรง. Extras 2020 และ 2015 ตรงกับคอลัมน์ PSLP/PSH Net Return*; ตัวเลข PSLP-only ต่างกัน (56.6% และ -16.2%).",
+    "sources": [
+      {
+        "excerpt": "January 1, 2004–February 10, 2026: Cumulative Return 2,506.1%; Compound Annual Return 15.9% (คอลัมน์ PSLP/PSH Net Return).",
+        "retrievedAt": "2026-10-09T13:46:12+07:00",
+        "supports": "ยืนยันช่วงเวลาเต็ม, 15.9%, คำว่า Compound Annual Return และผลตอบแทนรายปีในตาราง รวมถึงหมายเหตุว่าเป็น NAV return ของผู้ลงทุนที่เข้า PSLP วันเริ่มต้นและแปลงเป็น PSH",
+        "title": "Pershing Square Holdings, Ltd. 2025 Annual Report",
+        "url": "https://assets.pershingsquareholdings.com/wp-content/uploads/2026/02/18175039/Pershing-Square-Holdings-Ltd.-2025-Annual-Report.pdf"
+      },
+      {
+        "excerpt": "Cumulative net returns ... PSLP ... January 1, 2004 ... transferred ... to PSH ... after performance fees, management fees and other expenses incurred by each fund.",
+        "retrievedAt": "2026-10-09T13:46:31+07:00",
+        "supports": "สนับสนุนความหมาย net และการหักค่าธรรมเนียม/ค่าใช้จ่ายของชุดผลตอบแทนสะสม PSLP→PSH; filing ที่ดึงข้อความได้ระบุช่วงถึง 31 ธ.ค. 2025 ไม่ใช่ช่วงเต็มถึง 10 ก.พ. 2026",
+        "title": "Pershing Square Inc. SEC filing",
+        "url": "https://www.sec.gov/Archives/edgar/data/2026053/000114036126008560/ny20040230x14_s1.htm"
+      },
+      {
+        "excerpt": "2020: PSLP/PSH Net Return 70.2%; 2015: PSLP/PSH Net Return (20.5%).",
+        "retrievedAt": "2026-10-09T13:46:12+07:00",
+        "supports": "แหล่งที่ผู้ใช้ให้และอ่านเนื้อหาจริงได้; ยืนยันค่า extra ปี 2020 และ 2015 ตรงกับคอลัมน์ PSLP/PSH",
+        "title": "Pershing Square: Letter to Shareholders in the 2025 Annual Report",
+        "url": "https://in.marketscreener.com/news/pershing-square-letter-to-shareholders-in-the-2025-annual-report-ce7e5ddfd98ff620"
+      }
+    ],
+    "extras": [
+      {
+        "confirmed": true,
+        "label": "2020",
+        "sourceUrl": "https://assets.pershingsquareholdings.com/wp-content/uploads/2026/02/18175039/Pershing-Square-Holdings-Ltd.-2025-Annual-Report.pdf",
+        "text": "70.2% (PSLP/PSH Net Return*)"
+      },
+      {
+        "confirmed": true,
+        "label": "2015",
+        "sourceUrl": "https://assets.pershingsquareholdings.com/wp-content/uploads/2026/02/18175039/Pershing-Square-Holdings-Ltd.-2025-Annual-Report.pdf",
+        "text": "-20.5% (PSLP/PSH Net Return*)"
+      }
+    ]
+  }
+]

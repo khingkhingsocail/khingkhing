@@ -1,0 +1,34 @@
+.short-post-views {
+  position: absolute;
+  z-index: 2;
+  top: 66px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  color: #fff;
+  background: #0009;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.short-post-views button {
+  padding: 3px 6px;
+  color: #d9ff55;
+  border: 1px solid #d9ff5560;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+}
+.short-post-views button:focus-visible {
+  outline: 2px solid #d9ff55;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .short-post-views {
+    top: calc(env(safe-area-inset-top, 0px) + 104px);
+    left: 16px;
+  }
+}

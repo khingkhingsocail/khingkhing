@@ -1,0 +1,59 @@
+.account-profile-view .account-profile-header > div:first-child > p:last-child {
+  max-width: 54ch;
+}
+.account-profile-save {
+  min-height: 44px;
+  justify-content: center;
+  box-shadow: 0 4px 18px #d9ff5514;
+}
+.account-profile-save:focus-visible {
+  outline: 2px solid var(--app-cyan, var(--lime));
+  outline-offset: 3px;
+}
+.account-profile-spin {
+  animation: account-profile-spin 1s linear infinite;
+}
+.account-profile-conflict {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  margin: 13px 0;
+  border: 1px solid rgba(255, 190, 90, .32);
+  background: rgba(255, 190, 90, .055);
+  color: #f1d7ad;
+  font-size: 11px;
+}
+.account-profile-conflict p { margin: 0; line-height: 1.7; }
+.account-profile-conflict .profile-action-button { flex: 0 0 auto; }
+.account-profile-warning {
+  border: 1px solid rgba(255, 190, 90, .24);
+  background: rgba(255, 190, 90, .04);
+  color: #e8d2ad;
+}
+.account-profile-privacy { margin-top: 16px; }
+.account-profile-actions { flex-wrap: wrap; }
+.account-profile-stats strong { color: var(--lime); }
+.account-profile-note { margin-top: 18px; }
+.account-profile-view .profile-file-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.account-profile-view .profile-file-label:focus-within {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+}
+@keyframes account-profile-spin {
+  to { transform: rotate(360deg); }
+}
+@media (max-width: 640px) {
+  .account-profile-header .profile-header-actions { width: 100%; }
+  .account-profile-header .account-profile-save { flex: 1; }
+  .account-profile-actions .account-profile-save { width: 100%; }
+  .account-profile-conflict { align-items: flex-start; flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .account-profile-spin { animation: none; }
+}
