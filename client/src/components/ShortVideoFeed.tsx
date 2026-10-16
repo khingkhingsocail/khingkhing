@@ -737,6 +737,8 @@ export default function ShortVideoFeed({
   );
   const pageRequestRef = useRef(0);
   const loadMoreBusyRef = useRef(false);
+  const lastFeedScrollTopRef = useRef(0);
+  const feedLoopJumpRef = useRef(false);
   const tablePostRef = useRef<string | null>(null);
   const statsReturnScrollRef = useRef(0);
   const previousStatsRef = useRef(statsOpen);
@@ -925,6 +927,7 @@ export default function ShortVideoFeed({
   }, [notificationTarget]);
 
   useLayoutEffect(() => {
+    lastFeedScrollTopRef.current = 0;
     scrollRef.current?.scrollTo({ top: 0 });
   }, [filter]);
 
@@ -1499,9 +1502,17 @@ export default function ShortVideoFeed({
         aria-labelledby={`feed-tab-${filter}`}
         hidden={statsOpen}
         onScroll={event => {
-          if (!statsOpen)
-            statsReturnScrollRef.current = event.currentTarget.scrollTop;
           const root = event.currentTarget;
+          const currentTop = root.scrollTop;
+          const previousTop = lastFeedScrollTopRef.current;
+          const scrollingDown = currentTop > previousTop;
+          const scrollingUp = currentTop < previousTop;
+          lastFeedScrollTopRef.current = currentTop;
+          if (!statsOpen) statsReturnScrollRef.current = currentTop;
+          if (feedLoopJumpRef.current) {
+            feedLoopJumpRef.current = false;
+            return;
+          }
           if (
             !statsOpen &&
             !commentsPost &&
@@ -1512,6 +1523,22 @@ export default function ShortVideoFeed({
               root.clientHeight * 2
           )
             void loadMorePublicFeed();
+          const atEnd = root.scrollHeight - currentTop - root.clientHeight < 8;
+          const hasEnoughPosts = visiblePosts.length > 1;
+          if (!statsOpen && !commentsPost && !nextCursor && hasEnoughPosts) {
+            if (scrollingDown && atEnd) {
+              feedLoopJumpRef.current = true;
+              root.scrollTo({ top: 1, behavior: "auto" });
+              return;
+            }
+            if (scrollingUp && currentTop <= 1) {
+              feedLoopJumpRef.current = true;
+              root.scrollTo({
+                top: Math.max(1, root.scrollHeight - root.clientHeight - 1),
+                behavior: "auto",
+              });
+            }
+          }
         }}
       >
         {visiblePosts.map((post, index) => (
