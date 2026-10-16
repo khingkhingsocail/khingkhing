@@ -23,7 +23,7 @@ const samples: WorkSample[] = [
     description: "ภาพตัวอย่างบรรยากาศเมืองยามค่ำ ใช้แสดงรูปแบบของการ์ดผลงาน",
     category: "ภาพถ่าย · ตัวอย่าง",
     year: "2026",
-    image: "/manus-storage/urban-night-vertical_7f92afe2.jpg",
+    image: "/demo-media/night-walk.png",
   },
   {
     id: "neon-corner",
@@ -32,7 +32,7 @@ const samples: WorkSample[] = [
     description: "ภาพตัวอย่างแสงสะท้อนและสีในเมือง ไม่ใช่ไฟล์ส่วนตัวที่ผู้ใช้เพิ่ม",
     category: "ภาพถ่าย · ตัวอย่าง",
     year: "2026",
-    image: "/manus-storage/neon-street_d6f1f55d.jpg",
+    image: "/demo-media/neon-corner.png",
   },
   {
     id: "rain-window",
@@ -51,7 +51,7 @@ const samples: WorkSample[] = [
     category: "วิดีโอ · สาธิต",
     year: "CC0",
     image: "/manus-storage/async-images/xyvXnx4742KfNK69tXqO8e/image-1.webp",
-    video: "/manus-storage/playfolio-flower_989f6926.mp4",
+    video: "/demo-media/motion-study.mp4",
   },
 ];
 
