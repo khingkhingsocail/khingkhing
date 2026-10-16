@@ -42,6 +42,7 @@ import KhingArena from "@/components/arena/KhingArena";
 import CommentsPanel from "@/components/comments/CommentsPanel";
 import { MediaViewSession } from "@/lib/mediaViews";
 import { usePublicPostView } from "@/hooks/usePublicPostView";
+import MediaLightbox, { FullscreenMediaButton } from "@/components/MediaLightbox";
 import type { ChatTarget } from "../../../shared/chat";
 import {
   feedCreatorFromPublicCreator,
@@ -274,6 +275,7 @@ function FeedPostCard({
   );
   const [imageReady, setImageReady] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const viewState = usePublicPostView(
     post.visibility === "public" ? post.publicMediaId : undefined,
     feedActive &&
@@ -345,6 +347,10 @@ function FeedPostCard({
             />
           )}
         </div>
+        <FullscreenMediaButton
+          label={post.kind === "video" ? "วิดีโอ" : "รูปภาพ"}
+          onClick={() => setLightboxOpen(true)}
+        />
         <div className="short-post__shade" aria-hidden="true" />
         <div className="short-post__topline">
           <span className="short-post__number">
@@ -608,6 +614,13 @@ function FeedPostCard({
           ) : null}
         </div>
       </div>
+      <MediaLightbox
+        open={lightboxOpen}
+        src={post.media}
+        kind={post.kind}
+        title={post.title}
+        onClose={() => setLightboxOpen(false)}
+      />
     </article>
   );
 }

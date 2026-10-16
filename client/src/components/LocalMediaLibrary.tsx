@@ -7,6 +7,7 @@ import {
   updateLocalMedia,
   type LocalMediaRecord,
 } from "@/lib/localMedia";
+import MediaLightbox, { FullscreenMediaButton } from "./MediaLightbox";
 
 function useBlobUrl(blob: Blob | undefined) {
   const [url, setUrl] = useState("");
@@ -37,6 +38,7 @@ function MediaTile({
   onDelete: (item: LocalMediaRecord) => void;
 }) {
   const src = useBlobUrl(item.file);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const date = new Date(item.createdAt);
   const dateLabel = Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat("th-TH", { dateStyle: "medium" }).format(date);
   return (
@@ -45,8 +47,10 @@ function MediaTile({
         {src && item.kind === "image" ? <img src={src} alt={item.name} loading="lazy" /> : null}
         {src && item.kind === "video" ? <video src={src} controls preload="metadata" aria-label={item.name} /> : null}
         {!src ? <div className="local-card__empty">กำลังเปิดไฟล์…</div> : null}
+        {src ? <FullscreenMediaButton label={item.kind === "video" ? "วิดีโอ" : "รูปภาพ"} onClick={() => setLightboxOpen(true)} /> : null}
         <span className="local-card__badge">{item.kind === "video" ? <Video size={13} /> : <ImagePlus size={13} />}{item.kind === "video" ? "ส่วนตัว · วิดีโอ" : "ส่วนตัว · รูปภาพ"}</span>
       </div>
+      <MediaLightbox open={lightboxOpen} src={src} kind={item.kind} title={item.name} onClose={() => setLightboxOpen(false)} />
       <div className="local-card__body">
         <div className="local-card__text">
           <h3>{item.name}</h3>

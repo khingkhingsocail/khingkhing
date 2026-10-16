@@ -28,6 +28,7 @@ import {
 import type { PublicUploadProgress } from "@shared/publicUpload";
 
 import PostingIdentity from "./PostingIdentity";
+import MediaLightbox, { FullscreenMediaButton } from "./MediaLightbox";
 import { useAuth } from "@/_core/hooks/useAuth";
 const PAGE_SIZE = 24;
 const viewCountFormatter = new Intl.NumberFormat("th-TH");
@@ -97,6 +98,7 @@ function PublicMediaCard({
   onClaim: () => void;
 }) {
   const assetUrl = getPublicMediaAssetUrl(item.id);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const createdAt = new Date(item.createdAt);
   const dateLabel = Number.isNaN(createdAt.getTime())
     ? ""
@@ -116,10 +118,21 @@ function PublicMediaCard({
             aria-label={item.title}
           />
         )}
+        <FullscreenMediaButton
+          label={item.kind === "video" ? "วิดีโอ" : "รูปภาพ"}
+          onClick={() => setLightboxOpen(true)}
+        />
         <span className="public-media-card__badge">
           <Globe2 size={12} /> สาธารณะ
         </span>
       </div>
+      <MediaLightbox
+        open={lightboxOpen}
+        src={assetUrl}
+        kind={item.kind}
+        title={item.title}
+        onClose={() => setLightboxOpen(false)}
+      />
       <div className="public-media-card__body">
         {item.creator ? (
           <p className="public-media-card__meta">

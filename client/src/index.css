@@ -184,6 +184,15 @@ button { color: inherit; }
 .local-card__preview { position: relative; height: 205px; display: grid; place-items: center; overflow: hidden; background: #0a0f16; }
 .local-card__preview img, .local-card__preview video { width: 100%; height: 100%; object-fit: cover; }
 .local-card__preview video { object-fit: contain; }
+.media-fullscreen-button { position: absolute; right: 10px; bottom: 10px; z-index: 3; display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(255,255,255,.28); border-radius: 9px; background: rgba(5,10,15,.78); color: #fff; cursor: pointer; backdrop-filter: blur(8px); transition: background .2s ease, transform .2s ease; }
+.media-fullscreen-button:hover, .media-fullscreen-button:focus-visible { background: rgba(156,233,237,.9); color: #071116; transform: scale(1.06); }
+.media-lightbox { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 28px; background: rgba(2,5,9,.94); backdrop-filter: blur(12px); }
+.media-lightbox__content { position: relative; display: grid; place-items: center; width: min(96vw, 1200px); height: min(92vh, 900px); }
+.media-lightbox__content img, .media-lightbox__content video { display: block; max-width: 100%; max-height: calc(100% - 34px); object-fit: contain; border-radius: 8px; box-shadow: 0 25px 90px rgba(0,0,0,.55); }
+.media-lightbox__content video { width: min(100%, 1000px); }
+.media-lightbox__caption { position: absolute; right: 0; bottom: 0; left: 0; margin: 0; overflow: hidden; color: rgba(255,255,255,.78); font-size: 12px; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+.media-lightbox__close { position: fixed; z-index: 2; top: 18px; right: 18px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(10,17,24,.82); color: #fff; cursor: pointer; }
+.media-lightbox__close:hover, .media-lightbox__close:focus-visible { background: var(--lime); color: #071116; }
 .local-card__empty { color: #89918d; font-size: 11px; }
 .local-card__badge { position: absolute; top: 10px; left: 10px; display: inline-flex; align-items: center; gap: 5px; padding: 6px 8px; background: rgba(9,14,21,.8); color: var(--lime); font-size: 9px; }
 .local-card__body { padding: 13px 13px 12px; }
