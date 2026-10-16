@@ -340,8 +340,10 @@ function FeedPostCard({
               muted={muted}
               loop
               playsInline
+              controls
               preload="metadata"
               aria-label={post.title}
+              onClick={event => event.stopPropagation()}
               onPlaying={() => setPlaying(true)}
               onPause={() => setPlaying(false)}
               onWaiting={() => setPlaying(false)}

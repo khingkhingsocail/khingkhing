@@ -457,7 +457,7 @@ body { overflow: hidden; background: var(--app-bg); }
 .short-post__media { z-index: -2; background: #11161a; }
 .short-post__media { cursor: zoom-in; }
 .short-post__media:focus-visible { outline: 2px solid var(--lime); outline-offset: -5px; }
-.short-post__media img, .short-post__media video { display: block; object-fit: cover; }
+.short-post__media img, .short-post__media video { display: block; object-fit: contain; background: #080d13; }
 .short-post__media img { filter: saturate(.91); }
 .short-post__shade { position: absolute; z-index: -1; inset: 0; pointer-events: none; background: linear-gradient(180deg,rgba(0,0,0,.32),transparent 23%,transparent 43%,rgba(0,0,0,.78) 100%), linear-gradient(90deg,rgba(0,0,0,.14),transparent 60%); }
 .short-post__topline { position: absolute; top: 16px; right: 16px; left: 16px; display: flex; justify-content: space-between; align-items: center; gap: 8px; color: rgba(255,255,255,.85); font: 8px var(--font-display); letter-spacing: 1px; }
