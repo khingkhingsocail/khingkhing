@@ -21,8 +21,8 @@ export function registerPostAIRoutes(app: Express) {
 
     try {
       const response = await invokeLLM({
-        model: "gpt-5-mini",
-        maxTokens: 500,
+        model: "gemini-3-flash-preview",
+        maxTokens: 1200,
         messages: [
           {
             role: "system",

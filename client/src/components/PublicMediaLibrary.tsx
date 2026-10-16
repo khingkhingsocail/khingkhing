@@ -558,7 +558,7 @@ export default function PublicMediaLibrary({
           ) : null}
           <div className="form-row">
             <label className="field-label">
-              ชื่อผลงาน
+              ชื่อผลงาน · AI คิดให้
               <input
                 value={title}
                 onChange={event => setTitle(event.target.value)}
@@ -568,7 +568,7 @@ export default function PublicMediaLibrary({
               />
             </label>
             <label className="field-label">
-              คำอธิบาย
+              คำอธิบาย · AI คิดให้
               <input
                 value={description}
                 onChange={event => setDescription(event.target.value)}
