@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Check, ImagePlus, LockKeyhole, Pencil, Trash2, Video, X } from "lucide-react";
+import { ArrowUpRight, Check, ImagePlus, LockKeyhole, Pencil, Send, Trash2, Video, X } from "lucide-react";
 import {
   clearLocalMedia,
   deleteLocalMedia,
@@ -8,6 +8,7 @@ import {
   type LocalMediaRecord,
 } from "@/lib/localMedia";
 import MediaLightbox, { FullscreenMediaButton } from "./MediaLightbox";
+import { uploadPublicMedia } from "@/lib/publicMedia";
 
 function useBlobUrl(blob: Blob | undefined) {
   const [url, setUrl] = useState("");
@@ -32,10 +33,14 @@ function MediaTile({
   item,
   onEdit,
   onDelete,
+  onPublish,
+  publishing,
 }: {
   item: LocalMediaRecord;
   onEdit: (item: LocalMediaRecord) => void;
   onDelete: (item: LocalMediaRecord) => void;
+  onPublish: (item: LocalMediaRecord) => void;
+  publishing: boolean;
 }) {
   const src = useBlobUrl(item.file);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -58,6 +63,7 @@ function MediaTile({
         </div>
         <p className="local-card__date">{dateLabel}{dateLabel ? " · " : ""}{formatBytes(item.file.size)}</p>
         <div className="local-card__actions">
+          <button type="button" className="text-button text-button--publish" disabled={publishing} onClick={() => onPublish(item)}><Send size={14} />{publishing ? "กำลังโพสต์…" : "โพสต์ขึ้นฟีด"}</button>
           <button type="button" className="text-button" onClick={() => onEdit(item)}><Pencil size={14} />แก้ไขข้อมูล</button>
           <button type="button" className="text-button text-button--danger" onClick={() => onDelete(item)}><Trash2 size={14} />ลบไฟล์</button>
         </div>
@@ -74,6 +80,7 @@ export default function LocalMediaLibrary({ onViewFeed }: { onViewFeed: () => vo
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [publishingId, setPublishingId] = useState<string | null>(null);
 
   async function refreshItems() {
     const stored = await getAllLocalMedia();
@@ -133,6 +140,25 @@ export default function LocalMediaLibrary({ onViewFeed }: { onViewFeed: () => vo
     }
   }
 
+  async function publishItem(item: LocalMediaRecord) {
+    if (publishingId) return;
+    setPublishingId(item.id);
+    setError("");
+    setMessage("");
+    try {
+      const uploadFile = new File([item.file], item.name, {
+        type: item.file.type || (item.kind === "video" ? "video/mp4" : "image/jpeg"),
+      });
+      const result = await uploadPublicMedia(uploadFile, item.name, item.description, false);
+      setMessage(`โพสต์ “${result.item.title}” ขึ้นฟีดสาธารณะแล้ว`);
+      onViewFeed();
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "โพสต์ขึ้นฟีดไม่สำเร็จ");
+    } finally {
+      setPublishingId(null);
+    }
+  }
+
   return (
     <div className="local-library">
       <div className="privacy-panel">
@@ -168,7 +194,7 @@ export default function LocalMediaLibrary({ onViewFeed }: { onViewFeed: () => vo
         <div className="local-grid">
           {items.map((item) => (
             <div key={item.id}>
-              <MediaTile item={item} onEdit={beginEdit} onDelete={(entry) => void deleteItem(entry)} />
+              <MediaTile item={item} onEdit={beginEdit} onDelete={(entry) => void deleteItem(entry)} onPublish={(entry) => void publishItem(entry)} publishing={publishingId === item.id} />
               {editingId === item.id ? (
                 <form className="edit-form" onSubmit={(event) => { event.preventDefault(); void saveEdit(item); }}>
                   <label className="field-label">ชื่อผลงาน<input autoFocus value={editName} onChange={(event) => setEditName(event.target.value)} maxLength={100} /></label>
