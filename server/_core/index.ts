@@ -20,6 +20,7 @@ import { registerRankingViewRoutes } from "../ranking-views/routes";
 import { registerInvestorReturnRoutes } from "../investor-returns/routes";
 import { registerPublicUploadRoutes } from "../public-upload/routes";
 import { registerFeedPersonalizationRoutes } from "../feed-personalization/routes";
+import { registerPostAIRoutes } from "../post-ai";
 async function startServer() {
   const app = express();
   const server = createServer(app);
@@ -40,6 +41,7 @@ async function startServer() {
   registerRankingViewRoutes(app);
   registerInvestorReturnRoutes(app);
   registerFeedPersonalizationRoutes(app);
+  registerPostAIRoutes(app);
   // Media routes above enforce their own raw-body limit before the general API parsers.
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));

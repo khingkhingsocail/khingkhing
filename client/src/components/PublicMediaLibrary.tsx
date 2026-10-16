@@ -10,6 +10,7 @@ import {
   RefreshCw,
   Trash2,
   Upload,
+  Sparkles,
 } from "lucide-react";
 import type { PublicMediaSummary } from "@shared/publicMedia";
 import {
@@ -224,6 +225,9 @@ export default function PublicMediaLibrary({
     useState<PublicUploadProgress | null>(null);
   const [previewFailed, setPreviewFailed] = useState(false);
   const [showFeedLink, setShowFeedLink] = useState(false);
+  const [hashtags, setHashtags] = useState<string[]>([]);
+  const [taggedFriends, setTaggedFriends] = useState("");
+  const [suggestionLoading, setSuggestionLoading] = useState(false);
   const previewUrl = useFilePreview(file);
 
   useEffect(() => {
@@ -259,9 +263,38 @@ export default function PublicMediaLibrary({
     setUploadProgress(null);
     setPreviewFailed(false);
     setShowFeedLink(false);
+    setHashtags([]);
     if (!selected) return;
     setTitle(fileBaseName(selected.name).slice(0, 100));
     setDescription("");
+    void suggestPostCopy(selected);
+  }
+
+  async function suggestPostCopy(selected: File) {
+    setSuggestionLoading(true);
+    setError("");
+    try {
+      const response = await fetch("/api/post-ai/suggest", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filename: selected.name, mimeType: selected.type, kind: isImageFile(selected) ? "image" : "video" }),
+      });
+      const payload = (await response.json()) as { title?: string; description?: string; hashtags?: string[]; error?: string };
+      if (!response.ok) throw new Error(payload.error || "AI แนะนำโพสต์ไม่สำเร็จ");
+      if (payload.title) setTitle(payload.title);
+      if (payload.description) setDescription(payload.description);
+      setHashtags(Array.isArray(payload.hashtags) ? payload.hashtags.slice(0, 5) : []);
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : "AI แนะนำโพสต์ไม่สำเร็จ");
+    } finally {
+      setSuggestionLoading(false);
+    }
+  }
+
+  function composedDescription() {
+    const hashtagsText = hashtags.length ? `\n\n${hashtags.join(" ")}` : "";
+    const friendsText = auth.isAuthenticated && taggedFriends.trim() ? `\n\nแท็กเพื่อน: ${taggedFriends.trim()}` : "";
+    return `${description.trim()}${hashtagsText}${friendsText}`.trim().slice(0, 240);
   }
 
   async function handleUpload(event: React.FormEvent<HTMLFormElement>) {
@@ -286,7 +319,7 @@ export default function PublicMediaLibrary({
       const result = await uploadPublicMedia(
         file,
         title.trim() || fileBaseName(file.name),
-        description,
+        composedDescription(),
         auth.isAuthenticated,
         setUploadProgress
       );
@@ -515,6 +548,14 @@ export default function PublicMediaLibrary({
               </div>
             </div>
           ) : null}
+          {file ? (
+            <div className="ai-post-tools">
+              <button type="button" className="text-button" onClick={() => void suggestPostCopy(file)} disabled={uploading || suggestionLoading}>
+                <Sparkles size={15} /> {suggestionLoading ? "AI กำลังคิด…" : "รีเฟรชชื่อ คำอธิบาย และ #"}
+              </button>
+              {hashtags.length ? <span className="public-media-card__meta">AI สร้างแฮชแท็กแล้ว 5 คำ: {hashtags.join(" ")}</span> : null}
+            </div>
+          ) : null}
           <div className="form-row">
             <label className="field-label">
               ชื่อผลงาน
@@ -535,8 +576,19 @@ export default function PublicMediaLibrary({
                 placeholder="เพิ่มคำอธิบายสั้น ๆ (ไม่บังคับ)"
                 disabled={uploading}
               />
-            </label>
+              </label>
           </div>
+          <label className="field-label">
+            แท็กเพื่อน (ต้องล็อกอิน)
+            <input
+              value={taggedFriends}
+              onChange={event => setTaggedFriends(event.target.value)}
+              maxLength={160}
+              placeholder={auth.isAuthenticated ? "เช่น @เพื่อน1 @เพื่อน2" : "เข้าสู่ระบบก่อนแท็กเพื่อน"}
+              disabled={uploading || !auth.isAuthenticated}
+            />
+            <span className="field-help">ใช้ @handle คั่นด้วยช่องว่าง ระบบจะแนบแท็กไปกับโพสต์สาธารณะ</span>
+          </label>
           {uploadProgress && (uploading || error) ? (
             <div
               className="public-upload-progress"

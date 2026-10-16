@@ -210,7 +210,9 @@ function makePublicPost(
       (item.accountLinked
         ? "โพสต์สาธารณะจากสมาชิกขิงขิง"
         : "โพสต์สาธารณะจากผู้เข้าชมขิงขิง"),
-    tags: ["#ขิงขิง", "#สาธารณะ"],
+    tags: Array.from(item.description.matchAll(/#[^\s#]{1,30}/g), match => match[0]).slice(0, 5).length
+      ? Array.from(item.description.matchAll(/#[^\s#]{1,30}/g), match => match[0]).slice(0, 5)
+      : ["#ขิงขิง", "#สาธารณะ"],
     media: getPublicMediaAssetUrl(item.id),
     audio:
       item.kind === "video"
