@@ -965,3 +965,9 @@ body { overflow: hidden; background: var(--app-bg); }
 .classifier-origin strong { color: #bfc8ff; }
 .classifier-origin span, .classifier-origin small { display: block; color: #a9b0c5; }
 .classifier-origin small { margin-top: 5px; color: #7f899e; font-size: 10px; }
+.entity-list { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--lime); font-size: 12px; }
+.entity-card { margin-top: 9px; padding: 11px 13px; border: 1px solid rgba(217,255,85,.16); background: rgba(217,255,85,.045); color: #c8cdbd; line-height: 1.75; }
+.entity-card > strong { display: block; color: var(--paper); font-size: 13px; }
+.entity-card span, .entity-card small { display: block; color: #a9b0a3; }
+.entity-card em { color: #d9daf0; }
+.entity-card small { color: #899384; }
