@@ -9,6 +9,7 @@ import {
   ImagePlus,
   UserRound,
   MessageCircle,
+  ScanSearch,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { Link } from "wouter";
@@ -16,6 +17,7 @@ import LocalProfileEditor from "@/components/LocalProfileEditor";
 import LocalMediaLibrary from "@/components/LocalMediaLibrary";
 import NeonCatchGame from "@/components/NeonCatchGame";
 import PublicMediaLibrary from "@/components/PublicMediaLibrary";
+import MediaClassifier from "@/components/MediaClassifier";
 import ShortVideoFeed from "@/components/ShortVideoFeed";
 import DiscoverWorks, {
   type DiscoverSection,
@@ -37,7 +39,8 @@ type ViewId =
   | "private-library"
   | "game"
   | "profile"
-  | "chat";
+  | "chat"
+  | "classifier";
 
 const navigation: {
   id: Exclude<ViewId, "private-library">;
@@ -47,6 +50,7 @@ const navigation: {
   { id: "feed", label: "ฟีดคลิป", Icon: House },
   { id: "gallery", label: "ค้นพบผลงาน", Icon: Compass },
   { id: "upload", label: "โพสต์สาธารณะ", Icon: ImagePlus },
+  { id: "classifier", label: "AI จำแนกสื่อ", Icon: ScanSearch },
   { id: "chat", label: "ข้อความ", Icon: MessageCircle },
   { id: "game", label: "เล่นเกม", Icon: Gamepad2 },
   { id: "profile", label: "โปรไฟล์", Icon: UserRound },
@@ -150,6 +154,18 @@ export default function Home() {
             </p>
           </header>
           <PublicMediaLibrary onViewFeed={() => setActiveView("feed")} />
+        </section>
+      );
+    }
+    if (activeView === "classifier") {
+      return (
+        <section className="tool-view tool-view--wide" aria-labelledby="classifier-page-title">
+          <header className="tool-view__header">
+            <p className="tool-view__eyebrow">AI · IMAGE / VIDEO CLASSIFICATION</p>
+            <h1 id="classifier-page-title">AI จำแนกรูปภาพและวิดีโอ</h1>
+            <p>อัปโหลดสื่อเพื่อดูวัตถุ สัตว์ ฉาก สี และการกระทำที่ AI ตรวจพบ พร้อมชื่อและคำอธิบายที่แนะนำ</p>
+          </header>
+          <MediaClassifier />
         </section>
       );
     }

@@ -939,3 +939,21 @@ body { overflow: hidden; background: var(--app-bg); }
 .app-notification-control { position: fixed; top: 12px; right: 16px; z-index: 45; }
 @media (max-width: 1199px) { .app-notification-control { top: 8px; right: 8px; } .feed-toolbar { padding-right: 56px; } }
 @media (max-width: 680px) { .app-notification-control { top: 6px; right: 6px; } .feed-toolbar { padding-right: 50px; } }
+
+.classifier-panel { margin-top: 24px; padding: 28px; border: 1px solid rgba(217,255,85,.18); background: linear-gradient(135deg, rgba(217,255,85,.07), rgba(105,123,255,.08)); border-radius: 4px; }
+.classifier-panel__intro { display: flex; gap: 16px; align-items: flex-start; }
+.classifier-panel__icon { width: 44px; height: 44px; flex: 0 0 auto; display: grid; place-items: center; color: var(--ink); background: var(--lime); border-radius: 3px; }
+.classifier-panel h2 { margin: 6px 0 8px; font: 500 clamp(26px, 4vw, 42px)/1.1 var(--font-display); letter-spacing: -.05em; }
+.classifier-panel__intro p:last-child { max-width: 650px; margin: 0; color: #a4aca3; font-size: 13px; line-height: 1.8; }
+.classifier-picker { min-height: 58px; margin-top: 26px; padding: 0 17px; display: flex; align-items: center; gap: 11px; border: 1px dashed rgba(217,255,85,.5); color: var(--lime); cursor: pointer; font-size: 12px; }
+.classifier-picker span { color: var(--paper); }
+.classifier-picker input { display: none; }
+.classifier-result { margin-top: 20px; padding: 20px; border-left: 3px solid var(--lime); background: rgba(11,16,24,.7); }
+.classifier-result h3 { margin: 0 0 13px; color: var(--lime); font-size: 16px; }
+.classifier-result p { margin: 7px 0; color: #c7cbbd; font-size: 12px; line-height: 1.7; }
+.classifier-copy { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); color: #aeb5aa; font-size: 12px; line-height: 2; }
+.classifier-copy strong { color: var(--paper); }
+.classifier-note { display: flex; align-items: center; gap: 7px; margin: 16px 0 0; color: #7f8983; font-size: 10px; }
+.spin { animation: classifier-spin 1s linear infinite; }
+@keyframes classifier-spin { to { transform: rotate(360deg); } }
+@media (max-width: 720px) { .classifier-panel { padding: 20px; } .classifier-panel__intro { gap: 11px; } }
