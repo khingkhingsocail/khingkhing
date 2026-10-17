@@ -37,7 +37,7 @@ export function registerPostAIRoutes(app: Express) {
             content: [
               {
                 type: "text",
-                text: `วิเคราะห์${kind}จากภาพตัวอย่างที่แนบ (ถ้าเป็นวิดีโอคือเฟรมตัวอย่าง) ห้ามระบุตัวตนหรือชื่อบุคคลจากใบหน้า ให้ระบุเฉพาะสิ่งที่เห็นจริง และตอบเป็น JSON object เท่านั้น มีคีย์ title, description, hashtags, mediaType, detectedObjects, animals, actions, scene, colors\nชื่อไฟล์: ${filename}\nชนิดไฟล์: ${mimeType}\nสร้าง title ภาษาไทยไม่เกิน 100 ตัวอักษร, description ภาษาไทยไม่เกิน 170 ตัวอักษร และ hashtags จำนวน 5 คำพอดี แต่ละคำขึ้นต้นด้วย # ห้ามเว้นวรรคในคำและไม่ซ้ำกัน`,
+                text: `วิเคราะห์${kind}จากภาพตัวอย่างที่แนบ (ถ้าเป็นวิดีโอคือเฟรมตัวอย่าง) ห้ามระบุตัวตนหรือชื่อบุคคลจากใบหน้า ให้ระบุเฉพาะสิ่งที่เห็นจริง และตอบเป็น JSON object เท่านั้น มีคีย์ title, description, hashtags, mediaType, detectedObjects, animals, actions, scene, colors, aiOriginAssessment, aiOriginClues\nประเมินด้วยว่าเห็นสัญญาณภาพที่อาจสร้างหรือแก้ด้วย AI หรือไม่ โดยใช้ค่า likely_ai, likely_camera หรือ uncertain เท่านั้น และเขียนเหตุผลสั้น ๆ ใน aiOriginClues ห้ามสรุปยืนยันจากภาพเพียงอย่างเดียว\nชื่อไฟล์: ${filename}\nชนิดไฟล์: ${mimeType}\nสร้าง title ภาษาไทยไม่เกิน 100 ตัวอักษร, description ภาษาไทยไม่เกิน 170 ตัวอักษร และ hashtags จำนวน 5 คำพอดี แต่ละคำขึ้นต้นด้วย # ห้ามเว้นวรรคในคำและไม่ซ้ำกัน`,
               },
               ...(mediaDataUrl ? [{ type: "image_url" as const, image_url: { url: mediaDataUrl, detail: "auto" as const } }] : []),
             ],
@@ -46,7 +46,7 @@ export function registerPostAIRoutes(app: Express) {
         responseFormat: { type: "json_object" },
       });
       const content = response.choices?.[0]?.message?.content;
-      let raw: { title?: unknown; description?: unknown; hashtags?: unknown; mediaType?: unknown; detectedObjects?: unknown; animals?: unknown; actions?: unknown; scene?: unknown; colors?: unknown } = {};
+      let raw: { title?: unknown; description?: unknown; hashtags?: unknown; mediaType?: unknown; detectedObjects?: unknown; animals?: unknown; actions?: unknown; scene?: unknown; colors?: unknown; aiOriginAssessment?: unknown; aiOriginClues?: unknown } = {};
       if (typeof content === "string") {
         try {
           raw = JSON.parse(content) as typeof raw;
@@ -71,6 +71,8 @@ export function registerPostAIRoutes(app: Express) {
         actions: Array.isArray(raw.actions) ? raw.actions.filter((v): v is string => typeof v === "string").slice(0, 8) : [],
         scene: safeText(raw.scene, 120),
         colors: Array.isArray(raw.colors) ? raw.colors.filter((v): v is string => typeof v === "string").slice(0, 6) : [],
+        aiOriginAssessment: raw.aiOriginAssessment === "likely_ai" || raw.aiOriginAssessment === "likely_camera" || raw.aiOriginAssessment === "uncertain" ? raw.aiOriginAssessment : "uncertain",
+        aiOriginClues: safeText(raw.aiOriginClues, 240) || "ภาพอย่างเดียวไม่สามารถยืนยันแหล่งที่มาได้ ควรตรวจ metadata หรือไฟล์ต้นฉบับเพิ่มเติม",
       });
     } catch (cause) {
       return fail(res, cause);

@@ -957,3 +957,11 @@ body { overflow: hidden; background: var(--app-bg); }
 .spin { animation: classifier-spin 1s linear infinite; }
 @keyframes classifier-spin { to { transform: rotate(360deg); } }
 @media (max-width: 720px) { .classifier-panel { padding: 20px; } .classifier-panel__intro { gap: 11px; } }
+
+.classifier-preview { margin-top: 18px; min-height: 180px; max-height: 460px; display: grid; place-items: center; overflow: hidden; background: #080c12; border: 1px solid var(--line); }
+.classifier-preview img, .classifier-preview video { display: block; max-width: 100%; max-height: 460px; object-fit: contain; }
+.classifier-preview video { width: 100%; }
+.classifier-origin { margin-top: 16px; padding: 13px 15px; border: 1px solid rgba(105,123,255,.32); background: rgba(105,123,255,.08); color: #d6daf0; font-size: 12px; line-height: 1.75; }
+.classifier-origin strong { color: #bfc8ff; }
+.classifier-origin span, .classifier-origin small { display: block; color: #a9b0c5; }
+.classifier-origin small { margin-top: 5px; color: #7f899e; font-size: 10px; }
